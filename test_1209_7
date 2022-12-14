@@ -1,0 +1,71 @@
+import java.util.Scanner;
+
+class Book{
+	String str;
+	int price;
+	
+	Book(String a, int b){
+		str=a;
+		price=b;
+	}
+	Book(String a){
+		this(a, 40000);
+	}
+	void title() {
+		System.out.println(str+"는 "+price+"원");
+	}
+}
+public class test_1209_7 {
+	public static void main(String[] args) {
+		//1. main()함수를 보고클래스 Book을 구현해라.
+		//main(){
+		//Book b1=new Book(“자바”); 
+		//b1.title(); //자바는 40000원
+		//Book b2=new Book(“파이썬”, 30000);
+		//b2.title(); //파이썬 30000원
+		//}
+		Book b1=new Book("자바");
+		b1.title(); //자바는 40000원
+		
+		Book b2=new Book("파이썬", 30000);
+		b2.title(); //파이썬 30000원
+		
+		//2. 1~100안의 정수를입력받아 3,6,9 중 하나가 있는 경우 “짝”, 두 개 있는 경우 “짝짝”,
+		//하나도 없으면 “땡”을출력해라. 
+		//(정수값이 39라고 할 때, n/10=3, n%10=9 이 나온다. (/, % 연산자 활용))
+		//실행 결과) 입력:39 
+		//짝짝
+		
+		int a=(int)(Math.random()*100)+1;
+
+		int b=a/10;
+		int c=a%10;
+		
+		/*
+		 * if(b==0) { if(c%3==0) { System.out.println(a+"짝"); } } else if(b%3==0) {
+		 * if(c%3==0) { System.out.println(a+"짝짝"); } else { System.out.println(a+"짝");
+		 * } } else{ if(c%3==0) { System.out.println(a); } else { System.out.println(a);
+		 * }
+		 * 
+		 * }
+		 */
+		System.out.println("a: "+a);
+		if(a/10==3||a/10==6||a/10==9) {
+			if(a%10==3||a%10==6||a%10==9) {
+				System.out.println("짝짝");	
+			}
+			else {
+				System.out.println("짝");
+			}
+			
+		}
+		else {
+			if(a%10==3||a%10==6||a%10==9) {
+				System.out.println("짝");	
+			}
+			else {
+				System.out.println("땡");
+			}
+		}
+	}
+}
