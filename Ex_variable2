@@ -1,0 +1,40 @@
+public class Ex_variable {
+	/*
+	static void in() { // 매개변수 없음
+	int a=10;	//지역변수
+	System.out.println(a);	//10
+	}
+
+	static int a;	//전역변수(global variable):전체적인 영역
+	static void aa() {
+		a=10;
+	}
+	static void bb() {
+		int a = 20;	//지역변수(local variable):
+	}
+	static int add(int a, int b) {
+		int sum=0;
+		return a+b;
+	}
+	*/
+	public static void main(String[] args) {
+		/*
+		 int a = 0; // 지역변수(local variable) : 함수 안에 들어가 있는 변수
+		 
+					//메인에 있는 메소드에서만 기능을 하고, in()함수에 있는 에소드에서는 기능을 못한다.
+		in(); // 함수호출,매개변수 없음
+
+		System.out.println(a);	//0
+		
+		
+		aa();	//10
+		bb();	//20(x
+		)
+		System.out.println(a);	//10 -> aa()의 전역변수 a가 출력된다.
+	
+		int sum = add(30,40);
+		System.out.println(sum);
+		*/
+		
+	}
+}
