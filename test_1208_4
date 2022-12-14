@@ -1,0 +1,24 @@
+public class test_1208_4 {
+
+	public static void main(String[] args) {
+		//4. 실수 9.5를 객체화(박싱) 시켜라.
+		Double d = new Double(9.5);
+		Double d2=9.5;
+		
+		//4.1) 객체화 시킨 9.5를 문자열로 변경해라.
+		String s=d.toString();		
+
+		//4.2) 문자열로 변경한 9.5를 기본형값으로 언박싱해라.
+		double d3=Double.parseDouble(s);	
+		double d4=Double.valueOf(s);		//오토언박싱
+		
+		//출력->9.5
+		System.out.println(d);
+		System.out.println(d2);
+		System.out.println(s);
+		System.out.println(d3);
+		System.out.println(d4);
+		
+		
+	}
+}
