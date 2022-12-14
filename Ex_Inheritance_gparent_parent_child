@@ -1,0 +1,39 @@
+class Elec {
+	String color;
+
+	Elec(String c) {
+		color = c;
+	}
+}
+class Note extends Elec{
+	int number;
+	Note(String c, int n){
+		super(c);
+		this.number=n;
+	}
+}
+class Ipad extends Note{
+	int size;
+	Ipad(String c, int n, int s){
+		super(c,n);
+		this.size=s;
+	}
+	void show() {
+		System.out.println(color+"색"+number+"개"+size+"인치");
+	}
+}
+public class Ex_Inheritance_gparent_parent_child {
+	public static void main(String[] args) {
+		//Elec(조부모)⊃Note(부모)⊃Ipad(자식)
+		
+		//업캐스팅 -> 부모 부모p=new 자식;
+		//다운캐스팅 ->자식 c=(자식)부모p;
+		
+		//Ipad객체 만들어서 출력
+		Ipad i=new Ipad("red", 10, 8);
+		i.show();
+		
+		//업캐스팅
+		Elec e=new Ipad("red", 10, 8);
+	}
+}
