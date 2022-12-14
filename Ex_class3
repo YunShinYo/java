@@ -1,0 +1,29 @@
+import java.io.FileInputStream;
+
+public class Ex_class_3 {
+	int studentId;
+	String studentName;
+	int grade;
+	String address; // 필드=멤버변수
+
+	public String getStudentName() { // 메소드
+		return studentName;
+	}
+
+	public static void main(String[] args) {
+		//1. public class
+		Ex_class_3 studentAhn = new Ex_class_3();
+		//클래스명 변수이름       = new 생성자
+		studentAhn.studentName = "안연수";
+		System.out.println(studentAhn.studentName);
+		System.out.println(studentAhn.getStudentName());	//안연수 돌려받음
+		Ex_class_3 studentAhn1 = new Ex_class_3();
+		
+		//객체개수 제한없다
+		studentAhn1.studentName = "안승연";
+		System.out.println(studentAhn1.studentName);
+		System.out.println(studentAhn1.getStudentName());
+		
+		
+	}
+}
