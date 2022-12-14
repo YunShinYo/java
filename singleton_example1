@@ -1,0 +1,25 @@
+/*
+
+class Company {
+	private static Company instance;
+
+	private Company() {
+	}
+
+	public static Company getInstacne() {
+		if (instance == null) {
+			instance = new Company();
+		}
+		return instance;
+
+	}
+}
+
+public class singleton예제 {
+	public static void main(String[] args) {
+		Company myComp1 = Company.getInstacne();
+		Company myComp2 = Company.getInstacne();
+		System.out.println(myComp1 == myComp2);
+	}
+}
+*/
