@@ -1,0 +1,33 @@
+/*
+interface Food{
+	public String name();	//인터페이스는 껍데기로 작성해놓고 
+							//비어있는 함수를 개발자마다 다르게 구현할 수 있다
+}
+class Pizza implements Food{
+	@Override	//어노테이션(주석 : 함수에 대한 일종의 설명,개발코드에 영향을 미치지는 않는다.)
+	public String name() {	//오버라이딩 작업
+		return "피자";
+	}
+}
+class Steak implements Food{	//오버라이딩 작업
+	@Override	//어노테이션(주석 : 함수에 대한 일종의 설명,개발코드에 영향을 미치지는 않는다.)
+	public String name() {
+		return "스테이크";
+	}
+}
+//Food가 부모고 자식이 Pizza, Steak 2개 이고
+//new Pizza()하면 그 범위 안에서 출력되기때문에
+//Pizza클래스의 name()을 출력한다.
+
+public class Ex_Interface3 {
+	static void pr(Food f) {	//Food f=new Pizza(); //->업캐스팅
+		System.out.println(f.name());
+	}
+	public static void main(String[] args) {
+		
+		pr(new Pizza());	//피자 출력
+		pr(new Steak());	//스테이크 출력
+
+	}
+}
+*/
