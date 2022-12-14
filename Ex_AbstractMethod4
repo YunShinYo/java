@@ -1,0 +1,34 @@
+import java.util.Scanner;
+/*
+class Arr{
+	static int[] con(int[] ary1, int[] ary2) {
+		int[] arr=new int[ary1.length+ary2.length];	//8개
+
+		//int[] arr=new int[8];
+		for(int i=0; i<ary1.length; i++) {
+			arr[i]=ary1[i];
+			for(int j=ary1.length; j<ary1.length+ary2.length; j++) {
+				//j=4~7
+				arr[j]=ary2[j - ary1.length];
+			}
+		}
+		return arr; 
+	}
+	static void pr(int[] a) {	//arr
+		for(int i=0; i<a.length;i++) {
+			System.out.println(a[i]);
+		}
+	}
+}
+
+public class Ex_Abstractmethod4 {
+	public static void main(String[] args) {
+		
+		int ary1[]= {1,2,3,4};
+		int ary2[]= {5,6,7,8};
+		
+		int ary3[]=Arr.con(ary1,ary2); //Arr: 클래스명
+		Arr.pr(ary3);
+	}
+}
+*/
