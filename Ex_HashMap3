@@ -1,0 +1,31 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+
+public class Ex_Hashmap3 {
+	public static void main(String[] args) {
+		//HashMap<String, String> h=new HashMap<String, String>();
+		HashMap h=new HashMap(); 
+		//이렇게만 적어줘도 된다.<String, String>이라는 것을 put()을 통해 인식하지만 정확한 표현은 아니다.
+		//정확하게 적기 위해서는 앞부분은 명시를 해줘야 되고 뒷부분은 해도되고 안해도 된다.
+		
+		h.put("물", "water");
+		h.put("커피", "coffee");
+		h.put("티", "tea");		
+
+		System.out.println(h.get("물"));//출력-> water
+		System.out.println(h.get("커피"));//출력-> coffee
+		System.out.println(h.get("티"));//출력-> tea
+		
+		Set<String> keys=h.keySet();	//물 커피 티	=>키
+		
+		Iterator<String> it=keys.iterator();
+		while(it.hasNext()) {
+			String a=it.next();	//keys가 기준(keySet()) -> iterator니까 순차적으로 들어감
+			String b=(String)h.get(a);	//=>키에 맞는 값
+			//Object형태로 들어가니까 (String)으로 다운캐스팅이 필요하다.
+			//위에서 구체적으로 적어주면 다운캐스팅 따로 안해줘도 된다.. 
+			System.out.println(a+""+b); //키 값
+		}
+	}
+}
