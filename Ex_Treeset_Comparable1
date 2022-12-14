@@ -1,0 +1,62 @@
+import java.util.Iterator;
+import java.util.TreeSet;
+/*
+class Pro implements Comparable<Pro>{
+	String a;
+	int b;
+	Pro(String a, int b){
+		this.a=a;
+		this.b=b;
+	}
+	void show() {
+		System.out.println(a+" "+b);
+	}
+
+	@Override
+	public int compareTo(Pro p) {
+		if(b>p.b)	//128이랑 123이랑 비교함(여기서는 3번 비교)
+			return 1;//오름차순으로 비교해서 정렬하려고..
+		else if(b<p.b)
+			return -1;
+		else
+			return 0;
+		
+		//if(b>p.b)	//128이랑 123이랑 비교함(여기서는 3번 비교)
+		//return -1;//내림차순으로 비교해서 정렬하려고..
+		//else if(b<p.b)
+		//return 1;
+		//else
+		//return 0;
+	}
+	
+}
+public class Ex_Treeset_Comparable_Comparator1 {
+
+	public static void main(String[] args) {
+		//implements Comparable<member> 인터페이스에는 
+		//int compareTo(T o) 추상 메서드가 들어있다. ->어떤 거를 정렬해야 할지 객체 비교를 하겠다.
+		//compareTo 메서드를 재정의하면 두값을 비교하여 새로 추가한 회원아이디가 
+		//더 크면 양수, 그렇지 않으면 음수, 같으면0을 반환하도록 만들었다.(더 크면=> 나중에 나온다는 뜻이다.)
+		
+		TreeSet<Pro> t=new TreeSet<Pro>();
+		t.add(new Pro("cc",128));
+		t.add(new Pro("aa",123));
+		t.add(new Pro("bb",125));
+		
+		//그냥은 이터레이터 돌려도 정렬해서 출력안되서 Comparable<E> 인터페이스 구현해서
+		//compareTo()메소드 재정의 해주고 있다.
+		
+		Iterator<Pro> it=t.iterator();
+		while(it.hasNext()){
+			it.next().show();	//정수값이 오름차순으로 되면서 출력(왼쪽-부모-오른쪽 순으로..)
+		}
+		//(숫자오름차순으로)출력-> 
+		//aa 123
+		//bb 125
+		//cc 128
+	}
+}
+//사실 웹개발에서 treeSet은 많이 이용하지 않음
+//javascript를 이용해서 짜기 때문에
+//arrayList와 Map부분을 더 많이 이용함
+ */
