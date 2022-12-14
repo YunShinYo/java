@@ -1,0 +1,44 @@
+import java.util.Scanner;
+/*
+abstract class Circle {
+	protected double r; // 자식클래스에서 r값 사용 가능
+
+	Circle(double r) { // 생성자
+		this.r = r;
+	}
+
+	abstract double get(); // 추상메소드
+}
+
+class Cir extends Circle {
+
+	Cir(double r) {
+		super(r); // this.r=r;
+	}
+
+	double get() {
+		return r;
+	}
+}
+
+public class Ex_Abstractmethod3 {
+	public static void main(String[] args) {
+//Cir c=new Cir(3.2);
+
+//double c=new double[5];
+//객체 5개 배열 생성
+		Circle c[] = new Circle[5];
+
+		Scanner s = new Scanner(System.in);
+
+		for (int i = 0; i < c.length; i++) {
+			double r = s.nextDouble();
+			c[i] = new Cir(r); // 객체 생성
+//1.1 2.1 3.1 4.1 5.1
+//Cicle c[]=new Cir(r); .. //upcasting
+			System.out.println(c[i].get());
+		}
+
+	}
+}
+*/
