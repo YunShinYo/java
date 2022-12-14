@@ -1,0 +1,25 @@
+
+public class Ex_operator1 {
+	public static void main(String[] args) {
+
+		
+		//산술 :  +,-,*,%(나머지)
+		//산술 연산자 /와% (나누기(몫)과 나머지)
+		//비트 연산자
+		//a&&b : and 연산자
+		//a||b : or 연산자
+		//a^b : xor 연산자
+		//~a	: not 연산자
+		
+		//int->4byte->32bit
+		//(1바이트=8비트)
+		//byte->1byte->8bit		
+		
+		//시프트 연산자 -> 몰라도 된다
+		//a>>b : 산술적 오른쪽 시프트
+		//a>>>b : 논리적 오른쪽 시프트
+		//a<<b : 산술적 왼쪽 시프트
+		
+		
+		}
+}
