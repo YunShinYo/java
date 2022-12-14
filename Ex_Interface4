@@ -1,0 +1,67 @@
+/*
+interface A{
+public void funcA(); //추상 메소드
+//인터페이스라서 (default없고 abstract예약어 없지만 추상메소드임을 알수있다.)
+}
+
+interface B{
+public void funcB(); //추상 메소드
+}
+
+interface C extends A,B{ //다중 상속
+public void funcC(); //추상 메소드
+}
+
+class D implements C{
+@Override
+public void funcA() {
+System.out.println("funcA");
+}
+
+@Override
+public void funcB() {
+System.out.println("funcB");
+}
+
+@Override
+public void funcC() {
+System.out.println("funcC");
+}
+}
+
+public class Ex_Interface5 {
+public static void main(String[] args) {
+//implements : 시행하다라는 뜻이다.
+//interface C implements A,B(x)
+//class C extends A,B(o)
+//interface C extends A,B(o):다중상속, 추상메소드 가져올수 있지만 구현은 하면안된다.
+
+//인터페이스는 객체생성이 불가능하므로 A,B,C는 객체생성을 할 수 없다
+
+D d1=new D();
+d1.funcA(); //출력->funcA
+d1.funcB(); //출력->funcB
+d1.funcC(); //출력->funcC
+
+A a1=d1; //up(객체생성 아님..)
+a1.funcA(); //출력-> funcA
+
+//객체생성이 불가능하기 때문에 이렇게 적는건 안된다.
+//A a;
+//a.funcA();
+
+B b1=d1; //up
+b1.funcB();
+
+//C는 다 접근 가능
+C c1=d1; //up
+c1.funcA();
+c1.funcB();
+c1.funcC();
+
+//인터페이스에서 객체 생성 불가능하기 때문에
+//상속받은 클래스 D에서 객체 생성해줌
+
+}
+}
+*/
