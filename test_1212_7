@@ -1,0 +1,43 @@
+import java.util.HashSet;
+/*
+class Student {
+	private String a, b;
+
+	Student(String a, String b) {
+		this.a = a;
+		this.b = b;
+	}
+
+	public int hashCode() {
+		return Integer.parseInt(a);
+	}
+	public boolean equals(Object obj) {
+		Student s=(Student)obj;
+		//(a.compareTo(s.a)==0) {
+		if(a.equals(s.a)){
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	public String toString() {
+		return a + ":" + b;
+	}
+}
+
+public class test_1212_7 {
+	public static void main(String[] args) {
+		// p.446 5번
+		HashSet<Student> set = new HashSet<Student>();
+		set.add(new Student("100", "홍길동"));
+		set.add(new Student("200", "강감찬"));
+		set.add(new Student("300", "이순신"));
+		set.add(new Student("400", "정약용"));
+		set.add(new Student("100", "송중기"));
+
+		System.out.println(set);
+	}
+}
+*/
