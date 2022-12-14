@@ -1,0 +1,46 @@
+/*
+class Friend{
+	private String name;
+	private String phone;
+	Friend(String name, String phone){
+		this.name=name;
+		this.phone=phone;
+	}
+	String get() {
+		return name+" "+phone;
+	}
+}
+class ITFriend extends Friend{
+	private String major;
+	ITFriend(String a, String b, String major){
+		super(a, b);
+		this.major=major;
+	}
+	public void show() {
+		System.out.println(major+" "+get());
+	}
+}
+public class test_1208_2 {
+
+	public static void main(String[] args) {
+		//2. Friend클래스를 상속받은 ITFriend클래스를구현해라.
+		//class Friend{
+		//private String name;
+		//private String phone;
+		//Friend(String name, String phone){
+		//this.name=name; this.phone=phone; }
+		//String get(){
+		//return name +" "+phone;}
+
+		//Main() {
+		//ITFriend it=new ITFreind("홍길동", "010-111-1111", "컴퓨터");
+		//it.show(); 
+		//실행 결과) 컴퓨터 홍길동 번호 010-111-1111
+		
+		ITFriend it=new ITFriend("홍길동","010-111-1111","컴퓨터");
+		it.show();
+		
+	}
+
+}
+*/
