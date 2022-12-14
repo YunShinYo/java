@@ -1,0 +1,23 @@
+/*
+interface Animal{
+	public void bear();	
+}
+interface Fish{
+	public void swim();
+}
+class A implements Animal, Fish{	//다중상속
+	public void bear() {
+		System.out.println("낳는다");
+	}
+	public void swim() {
+		System.out.println("수영한다");
+	}
+}
+public class Ex_Interface2 {
+	public static void main(String[] args) {
+		A a=new A();
+		a.bear();	//낳는다
+		a.swim();	//수영한다
+	}
+}
+*/
