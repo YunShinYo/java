@@ -1,0 +1,84 @@
+import java.util.Scanner;
+
+public class review_1129_3 {
+	/*
+	 //
+	 static double average(int x, int y) {
+		//두 정수 입력받아 평균반환하는 함수
+		return (x+y)/2.0;
+	}
+	
+	//
+	static double average() {
+		Scanner s=new Scanner(System.in);
+		int x=s.nextInt();
+		int y=s.nextInt();
+		
+		s.close();
+		return (x+y)/2.0;
+	}
+	
+	//
+	static void average() {
+		Scanner s=new Scanner(System.in);
+		
+		int x=s.nextInt();
+		int y=s.nextInt();
+		
+		System.out.println((x+y)/2.0);
+		s.close();
+	}
+	//
+	static int total(int[] ary) {
+		int sum=0;
+		for(int i:ary) {
+			sum+=i;
+		}
+		return sum;
+	}
+	
+	//
+	static int total(int[][] ary) {
+		int sum=0;
+		for(int i=0; i<ary.length; i++) {
+			for(int j=0;j<ary[i].length; j++) {
+				sum+=ary[i][j];
+			}
+		}
+			
+		return sum;
+	}
+	*/
+	
+	public static void main(String[] args) {
+		/*
+		//
+		Scanner s=new Scanner(System.in);
+		 
+		int x=s.nextInt();
+		int y=s.nextInt();
+		
+		double avg=average(x,y);
+		System.out.println(avg);
+		s.close();
+		
+		//두 정수 입력받아 평균반환받는 함수
+		double avg=average();
+		System.out.println(avg);
+		
+		
+		//두 정수 입력받아 평균반환받는 함수
+		average();
+		
+		//배열 총합 출력
+		int ary[]= {1,2,3,4,5};
+		System.out.println(total(ary));
+		
+		
+		//2차원 배열 총합 출력
+		int ary[][]= {{1,2,3}, {4,5,6}};//2행 3열
+		System.out.println(total(ary));
+		*/
+	}
+}
+
