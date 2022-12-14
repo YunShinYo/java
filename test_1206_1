@@ -1,0 +1,60 @@
+import java.util.Scanner;
+/*
+class Tv {
+	String c;
+	int y, s;
+
+	Tv(String company, int year, int size) {
+		this.c = company;
+		this.y = year;
+		this.s = size;
+	}
+
+	void show() {
+		System.out.println(y + "년에 " + c + "에서 나온 " + s + "인치 Tv");
+	}
+}
+
+class Score {
+	int math, eng, com;
+
+	Scanner s = new Scanner(System.in);
+
+	Score(int math, int eng, int com) {
+		math = s.nextInt();
+		this.math=math;
+		eng = s.nextInt();
+		this.eng=eng;
+		com = s.nextInt();
+		this.com=com;
+	}
+
+	double avg() {
+		return (math + eng + com) / 3.0;
+	}
+}
+
+public class test_1206_1 {
+	public static void main(String[] args) {
+		// 1. Main()를 보고 클래스를 구현해라.
+		// main(){
+		// Tv t = new Tv(“삼성”, 2022, 20);
+		// t.show(); //2022년에 삼성에서 나온 20인치 Tv 출력
+
+		Tv t = new Tv("삼성", 2022, 20);
+		t.show();
+
+		// 2. Main()를 보고 클래스를 구현해라.
+		// (math, eng, com점수를 입력받아 구현)
+		// Score s= new Score(math, eng, com);
+		// System.out.println(“평균은” + s.avg());
+
+		int math = 0;
+		int eng = 0;
+		int com = 0;
+
+		Score s = new Score(math, eng, com);
+		System.out.println("평균은" + s.avg());
+	}
+}
+*/
