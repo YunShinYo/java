@@ -1,0 +1,40 @@
+public class systemoutprintln {
+	public static void main(String[] args) {
+		
+	
+		System.out.println("안녕");	//문자열
+		System.out.println('A');	//하나의 문자
+		System.out.println('안');	//하나의 문자는 작은따옴표
+		System.out.println(4);
+		System.out.println("4");
+		System.out.println("안");	//하나의 문자는 큰따옴표도 가능
+		//System.out.println('안녕');	//하나의 문자일때에는 작은 따옴표, 큰따옴표 상관없다
+		                            //문자열일때에는 큰따옴표에 넣어야한다.
+		
+		 
+		
+		//-------------------------------------
+		
+		/*System.out.println("안녕");
+		System.out.println("안녕");
+		System.out.print("hi");
+		System.out.print("hi");*/
+		
+		//sysout 입력후 ctrl+space바 누르면 출력문 자동완성
+		//sout
+		
+		/*System.out.println("ss");
+		System.out.print("aa");
+		System.out.println(4);*/
+		
+		//실행버튼 : F11
+		
+		//안녕하세요
+		//오늘 화요일 
+		
+		/* 안녕하세요
+		 * 오늘 화요일이네요 화요팅
+		 * 오늘도 힘내요*/
+	}
+	
+}
