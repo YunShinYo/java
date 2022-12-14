@@ -1,0 +1,39 @@
+/*
+ class Circle {
+ 
+	private int r; // 필드 (인스턴스 변수)
+
+	public Circle(int r) { // 생성자
+		// public Circle(int r)에서 int r은 매개변수가 아니고 파라미터라고 부른다.
+		this.r = r;
+	}
+
+	int get() { // 메소드
+		return r;
+	}
+}
+
+class NCircle extends Circle { // 부모를 통해서 자식을 확장하겠다는 뜻이다.
+	String color; // 자식에서 추가된 필드
+
+	NCircle(int r, String c) {
+		super(r); // 부모 생성자를 호출하는 것(r을 호출하는 것 아님)
+					// super(r)은 반드시 첫번째 줄에서 호출되어줘야한다.
+		// this.r=r; //(x), super()를 써주어야한다!
+		color = c;
+	}
+
+	void show() {
+		System.out.println("반지름 " + super.get() + color + " 색");
+		// get()은 부모에 있는 거니까 명시적으로 써주기 위해서 super.get()이라고 써준다. 근데 super.안써줘도 됨
+	}
+
+}
+
+public class Ex_Methodoverrideing {
+	public static void main(String[] args) {
+		NCircle c = new NCircle(10, "red");	//출력: 반지름 10red 색
+		c.show();
+	}
+}
+*/
