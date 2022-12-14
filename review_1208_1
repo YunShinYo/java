@@ -1,0 +1,61 @@
+/*
+abstract class Profile {
+	abstract void add(String name, String id);
+	abstract String check(String id);
+}
+
+class Person {
+	String name, id;
+	Person(String name, String id) {
+		this.name = name;
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public String getId() {
+		return id;
+	}
+}
+
+class Per extends Profile {
+	Person ary[]; // 객체 배열 선언
+	int n;
+	Per(int n) {
+		ary = new Person[n]; // 객체 배열 생성
+	}
+	@Override
+	void add(String name, String id) {
+		ary[n] = new Person(name, id); // 객체 생성
+		n++;
+	}
+	@Override
+	String check(String id) {
+		for(int i=0; i<n; i++) {
+			if(id.compareTo(ary[i].getId())==0) {	//int compareTo(String str) : 문자열 비교(같으면 0)
+				return ary[i].getName();
+			}
+		}
+		return null;//끝내라는 뜻임->문자열비교해서 같으면 ary[i].getName()을 반환하고 없으면 끝내라는 뜻이다
+	}
+}
+
+public class review_1208_1 {
+	public static void main(String[] args) {
+		Per p=new Per(5);	//Profile p=new Per(5); -> upcasting
+		p.add("user1", "123");//ary[0].name ary[0].id
+		p.add("user2", "456");//ary[1].name ary[1].id
+		p.add("user3", "344");//ary[2].name ary[2].id
+		
+		System.out.println(p.check("123"));
+		System.out.println(p.check("456"));
+		System.out.println(p.check("456"));
+	}
+	
+	//출력->
+	//user1
+	//user2
+	//user2
+
+}
+*/
