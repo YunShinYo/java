@@ -1,0 +1,10 @@
+public class test_1122 {
+	public static void main(String[] args) {
+		
+		byte b2=25;
+		long var1=b2;
+		
+		int n1=855638017;
+		short var2=(short)n1;
+	}
+}
