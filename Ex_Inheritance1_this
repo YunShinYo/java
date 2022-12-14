@@ -1,0 +1,55 @@
+class XY {
+	private int x, y;	//XY클래스에서만 유효
+
+	//XY(int x, int y){
+	//	his.x=x;
+	//	this.y=y;
+	//}
+	//XY(){}
+	void set(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+	void show() {
+		System.out.println(x+" "+y);
+	}
+	
+}
+class XYZ extends XY{	//XY클래스르 상속받은 XYZ클래스
+	//private int x, y;	//물려받았기 때문에 XYZ 자손 클래스에서는 선언하지 않는다 
+	private String name;
+
+	void setname(String a) {
+		name=a;
+	}
+	void pr() {
+		show();	//6 8
+		System.out.println(name);
+	}
+}
+
+public class Ex_inheritance1_this {
+
+	public static void main(String[] args) {
+		/*
+		//XY x = new XY(4,8);
+		XY x = new XY();
+		x.set(4, 8);
+		x.show();
+		*/
+		
+		//XY는 최상위 클래스(=조상) -> set(), show()
+		//물려받은 클래스 XYZ로 짠다 -> set(), setname(), pr()
+		
+		XYZ y=new XYZ();
+		y.set(6,8);			//부모에 있음
+		y.setname("xyz");	//부모에 없음
+		y.pr();				//부모에 없음
+		
+		//->출력
+		//6 8
+		//xyz
+
+	}
+
+}
