@@ -1,0 +1,55 @@
+/*
+class Circle {
+	int r;
+	Circle(int r) {
+		this.r = r;
+	}
+	public String toString() {
+		return r + "";
+	}
+	public boolean equals(Object ob) {	//Object ob=new Circle();
+		//객체 비교안하고 r값을 비교함
+		if(this.r==((Circle)ob).r) {
+			return true;
+		}
+		return false;
+	}
+}
+public class test_1208_5 {
+	public static void main(String[] args) {
+		// 5. equals(두 원의 면적이 같은지 비교), toString메소드를 사용하여 완성시켜라.
+		// (반지름이 30임)
+		// main(){
+		// Circle a=new Circle(30);
+		// Circle b=new Circle(30);
+		// System.out.println("반지름"+a);
+		// System.out.println("반지름"+b);
+		// if(a.equals(b)) {
+		// System.out.println("같은 원"); }
+		// else {
+		// System.out.println("다른 원");} }
+
+		Circle a = new Circle(30);
+		Circle b = new Circle(30);
+
+		System.out.println("반지름" + a);
+		System.out.println("반지름" + b);
+
+		if (a.equals(b)) {
+			System.out.println("같은 원");
+		} 
+		else {
+			System.out.println("다른 원");
+		}
+	}
+}
+
+//출력->
+//반지름30
+//반지름30
+//다른 원 : (객체비교)다른 메모리 가르켜고 있기 때문에 다른 원이 출력된다
+
+//만약에 같은 원을 출력하고 싶다면...
+//equals를 재정의를 해서 다시 코딩해주면 된다
+
+*/
