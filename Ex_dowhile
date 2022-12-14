@@ -1,0 +1,57 @@
+
+public class Ex_dowhile {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*
+		//반복문
+		//(조건에 관계없이) 무조건 최소 한번은 실행
+		//-> 조건에 만족못해도..
+		//-> 조건이 나중에 실행되기 때문이다
+
+
+		//예제1
+		int i=11;
+		do { //조건이 나중에 나오기 떄문이다
+		System.out.println(i); //11
+		i++; //12
+		}while(i<10); //false->break;.
+
+		 
+
+		//예제2
+		int n=1;
+		do {
+		System.out.println(n);//1은 나옴
+		n++;//2로 바뀐다
+		}while(n<0);//2일때 조건을 확인 -> false, 출력은 1만 나온다
+		
+
+		//1~20까지 출력
+		int n=1;
+		int sum=0;
+		do {
+		//System.out.println(n);//1은 나옴
+		sum+=n;
+		n++;//2로 바뀐다
+		}while(n<=20);
+		System.out.println(sum);
+
+		String str; //변수 선언
+		Scanner s=new Scanner(System.in);
+
+		do {
+		System.out.println("문자열 입력");
+		str=s.next();
+
+		if(str.equals("exit")) {
+		System.out.println("프로그램 종료");
+		}
+		else{
+		System.out.println(str);
+		}
+		}while(!str.equals("exit"));
+		*/
+	}
+
+}
