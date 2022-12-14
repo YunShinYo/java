@@ -1,0 +1,300 @@
+import java.util.Scanner;
+
+public class Ex_for {
+	public static void main(String[] args) {
+		//자바 반복문의 종류
+		//1. ★for문★
+		//2. while문
+		//3. do while문
+		
+		//for문의 구성(초기;조건;증감)
+		
+		/*
+		//★0에서 100까지의 총합 구하기★
+		for(int i=1;i<=100;i+=2) {	//i=i+2
+			System.out.println(i);
+		}
+		
+		for(int i=10;i>=0;i--) {
+			System.out.println(i);
+		}
+		
+		//for_if문 중첩
+		//1부터 100까지 수 출력하기 (1씩 증가)
+		for(int i=1; i<=100; i++) {	//항상 바깥쪽이 전제조건이다
+			if(i%5==0 && i%6==0) {	
+				System.out.println(i);
+			}
+		}
+		
+		Scanner s=new Scanner(System.in);
+		int sum=0;
+		
+		for(int i=0; i<=100; i++) {
+			//sum+=i;	//sum=sum+i
+			if(i%2==0) {	//짝수이면
+				sum+=i;
+			}
+		}
+		System.out.println(sum);
+		
+		
+		//i=1 *
+		//i=2 *
+		//i=3 *
+		//i=4 *
+		//i=5 *와 enter
+		//i=6 *...
+		for(int i=1; i<=15; i++) {
+			System.out.print("*");
+			if(i%5==0){
+				System.out.println();	//enter
+			}
+		}
+		
+		Scanner s=new Scanner(System.in);
+		System.out.println("몇단?");
+		
+		int dan=s.nextInt();
+		
+		for(int i=9;i>=1;i--) {
+			System.out.printf("%d*%d=%d\n",dan,i,dan*i);
+		}
+		*/
+		
+		/*
+		Scanner s=new Scanner(System.in);
+		System.out.println("정수 입력");
+		
+		int n=s.nextInt();
+		
+		switch(n) {
+		case 2:
+			System.out.println("2단");
+			//2
+			//4
+			//6...
+			//18
+			for(int i=1;i<=9;i++) {
+				System.out.println(2*i);
+			}
+			break;
+		case 3:
+			System.out.println("3단");
+			for(int i=1;i<=9;i++) {
+				System.out.println(3*i);
+			}
+			break;
+		default:
+			System.out.println("잘못입력");
+			break;
+		}
+		
+		//for(초기;true;반복)//반복조건이 true이면 무한반복
+		//for(초기;;반복)//반복조건이 비어있으면 true로 간주, 무한반복
+		//for(i=0;i<10;i++,System.out.println(i)	//초기 작업과 반복작업은 ','로 분리하여 여러문장 나열 가능
+		*/
+		/*
+		//중첩 반복(중첩 for문)
+		//반복문이 다른 반복문을 내포하는 구조
+		//행열구조
+		//행(바깥):전제조건, 열(안쪽)
+
+		//바깥 for문을 기준으로 안쪽 for문이 돈다
+		for(int i=1;i<=3;i++) {		//행
+			for(int j=1;j<=5;j++) {	//열
+				//System.out.println(i+" "+j);
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		
+		//*      i=0 j=1~j<1  => j=0		//j는 범위값이 하나있다
+		//**     i=1 j=2~j<2  => j=0,1		//j는 범위값이 둘있다
+		//***    i=2 j=3~j<3  => j=0,1,2
+		//****   i=3 j=4~j<4  => j=0,1,2,3
+		//*****  i=4 j=5~j<5  => j=0,1,2,3,4
+		
+		//가변적일 경우, i(바깥 for문의 변수)를 이용해서 j값이 나오도록 수식을 만든다
+		for(int i=0;i<5;i++) {
+			for(int j=0;j<i+1;j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		
+		//*****     i=0 j=0~j<5  -> j=0,1,2,3,4
+		//****      i=1 j=0~j<4  -> j=0,1,2,3
+		//***       i=2 j=0~j<3  -> j=01,2
+		//**        i=3 j=2
+		//*         i=4 j=1
+		
+		for(int i=0; i<5; i++) {
+			for(int j=0; j<5-i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		
+		//    *  i=0 공백j=4 
+		//   **  i=1    j=3 
+		//  ***  i=2    j=2 
+		// ****  i=3    j=1 
+		//*****  i=4    j=0 
+		//열의 역할이 2가지 : 공백, 별 
+		for(int i=0; i<5; i++) {	//0,1,2,3,4
+			for(int j=0; j<4-i; j++) {
+				//공백
+				System.out.print(" ");
+			}
+			for(int j=0; j<i+1; j++) {
+				//별
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		
+		//    *   i=0 j=1
+		//   **	  i=1 j=2
+		//  ***   i=2 j=3
+		// ****   i=3 j=4
+		//*****   i=4 j=5
+		// ****   i=5 j=1
+		//  ***   i=6 j=2
+		//   **   i=7 j=3
+		//    *   i=8 j=4
+		
+//		for(int i=0; i<9; i++) {
+//			if(i<5) {	//0,1,2,3,4
+//				for(int j=0; j<4-i; j++) {	//공백 
+//					System.out.print(" ");
+//				}
+//				for(int j=0; j<i+1; j++) {	//별
+//					System.out.print("*");
+//				}
+//				System.out.println();
+//			}
+//			else{ //i>=5 -> 5,6,7,8
+//				for(int j=4; j<i; j++) {	//공백 -> 4,3,2,1
+//					System.out.print(" ");
+//				}
+//				for(int j=9; j>i; j--) {	//별 ->★
+//					
+//					 //9 9>1;->ture 9
+//					 //8 8>2;->ture 8
+//					 //7 7>3;->ture 7
+//					 //6 6>4;->ture 6
+//					 //5 5>5;->false 5 : (x)실행안됨
+//					 
+//					System.out.print("*");
+//				}
+//				System.out.println();
+//			}
+//		}
+		
+		for(int i=0; i<9; i++) {
+			if(i<5) {	//0,1,2,3,4
+				for(int j=0; j<4-i; j++) {	//공백 
+					System.out.print(" ");
+				}
+				for(int j=0; j<i+1; j++) {	//별
+					System.out.print("*");
+				}
+			}
+			else{ //i>=5 -> 5,6,7,8
+				for(int j=0; j<i-4; j++) {	//공백
+					System.out.print(" ");
+				}
+				for(int j=0; j<9-i; j++) {	//별
+					System.out.print("*");
+				}
+			}
+			System.out.println();
+		}
+
+		
+	//	     *
+	//	    ***
+	//	   *****
+	//	  *******
+	//	 *********
+		for(int i=0; i<5; i++) {
+			for(int j=0; j<4-i; j++) {
+				System.out.print(" ");
+			}
+			for(int j=0;j<(2*i)+1; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		//                      *
+		//(0,1)(0,2)(0,3)(0,4)(0,5)
+		//                 *    *
+        //(1,1)(1,2)(1,3)(1,4)(1,5)....
+         
+         
+		//다른 사람이 짠거
+		for(int i = 0; i < 5; i++) {
+			for(int j = 1; j < 10; j++) {
+				System.out.print((j >= 5 - i) && (j <= 5 + i) ? "*" : " ");
+			}
+			System.out.println();
+		}
+		
+		                      		                 
+   		
+		
+  //     ***
+  //    ***
+  //   ***
+  //  ***
+  // ***
+
+
+		for(int i=0; i<5; i++) {
+			for(int j=0; j<4-i; j++) {
+				System.out.print(" ");
+			}
+			for(int j=0; j<5; j+=2) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		
+//    1
+//   123
+//  12345
+// 1234567
+//123456789
+		
+ for(int i=0; i<5; i++) {
+	int n=1;
+	for(int j=0; j<4-i; j++) {
+		System.out.print(" ");
+	}
+	for(int j=0; j<(2*i)+1; j++) {	//개수
+		System.out.print(n);
+		n++;	//1을 기준으로 개수만큼 하니씩 증가
+	}
+	System.out.println();
+ }
+ 
+
+		// 복습
+		int a=0;
+		for (int i = 0; i < 10; i++) {
+			for (int j = 0; j < 10; j++) {
+				if (a < 0) {	//바깥쪽 for문은 빠져나가지 못하고 안쪽 for문만 빠져나간다
+					break;
+				}
+			}
+		}
+		*/
+ }
+}
