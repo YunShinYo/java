@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Ex_scanner {
+	public static void main(String[] args) {
+		// s 클래스(입력)
+		// java.util.s 클래스
+
+		Scanner s = new Scanner(System.in); // 개발자가 원하는 다양한 타입 값을 쉽게 읽을 수 있음
+											// System.in에게 키보드 값 읽게 하기 위해 Scanner객체 생성해야 함
+											//클래스명 객체명 = new 클래스명
+		/*
+		System.out.println("여러분 이름 입력해주세요");
+		String name=s.next();	//. : 접근 연산자
+		System.out.println("내 이름은 "+name);
+		
+		System.out.println("여러분 나이 입력해주세요");
+		int age = s.nextInt();
+		System.out.printf("내 나이는 %d세\n",age);
+		
+		System.out.println("여러분 키 입력해주세요");
+		double height=s.nextDouble();
+		System.out.println("내 키는 "+height);
+		
+		//String name = s.next(); // "Kim" -> 다음 아이템을 문자열 타입으로 리턴한다.
+		//name = s.nextLine(); // 한 라인 전체('\n'까지)를 읽어 문자열 타입('\n' 미포함)으로 리턴한다.
+		//String addr = s.next(); // "Seoul"
+		//int age = s.nextInt(); // 33
+		//double weight = s.nextDouble();// 65.1
+		 */
+		
+		System.out.println("두 정수 입력해라");
+		
+		int a =s.nextInt();
+		int b =s.nextInt();
+		
+		System.out.println(a+b);
+		
+		
+	}
+}
