@@ -1,0 +1,46 @@
+class Fruit{
+	void fruit() {
+		System.out.println("과일");
+	}
+}
+class Apple extends Fruit{
+	void apple() {
+		System.out.println("사과");
+	}
+}
+class PineApple extends Apple{
+	void pineapple() {
+		System.out.println("파인애플");
+	}
+}
+public class review_1207_3 {
+	static void pr(Fruit f) {
+		if(f instanceof PineApple) {		//f는 PineApple형 객체와 같은가라는 뜻이다.
+			((PineApple)f).pineapple();		//pr(p)만 출력->파인애플
+			//다운캐스팅할때 클래스 명칭 적어야함->f.pineapple()은 틀리다
+		}
+		else if(f instanceof Apple) {
+			((Apple)f).apple();		//출력->사과
+		}
+		else {
+			f.fruit();				//출력->과일
+		}  
+	}
+	//Fruit f=new Fruit();
+	//Fruit f=new Apple();
+	//Fruit f=new PineApple();
+	public static void main(String[] args) {
+		Fruit f=new Fruit();
+		Apple a=new Apple();
+		PineApple p = new PineApple();
+		
+		pr(f);
+		pr(a);
+		pr(p);
+		
+		//출력->
+		//과일
+		//사과
+		//파인애플
+	}
+}
