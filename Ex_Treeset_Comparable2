@@ -1,0 +1,24 @@
+import java.util.TreeSet;
+
+public class Ex_Treeset_Comparable_Comparator2 {
+	public static void main(String[] args) {
+		TreeSet<Integer> grade=new TreeSet<Integer>();
+		
+		//grade.add(new Integer(30)); //원래는 new Integer(30)이라고 적어줘야 되는데 
+		grade.add(30);				  //autoboxing이 되어서 그냥 (30)이라고 써줘도 된다.
+		grade.add(100);
+		grade.add(50);
+		
+		Integer i=grade.first();	//맨처음값이고 반환형이 E
+		System.out.println(i);	//출력->30
+		
+		i=grade.last();	//맨끝값이고 반환형이 E
+		System.out.println(i);	//출력->100
+		
+		i=grade.lower(new Integer(80));	//80보다 작은 값
+		System.out.println(i);	//출력->50
+		
+		i=grade.higher(new Integer(80));	//80보다 큰 값
+		System.out.println(i);	//출력->100
+	}
+}
