@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class review_1129_2 {
+/*
+	static int big(int ary[]) {//a[] (7개 정수넣는 배열)
+		int max=0;
+		for(int i=0; i<ary.length; i++) {
+			if(max<ary[i])
+			{
+				max=ary[i];
+			}
+		}
+		return max;
+	}
+
+
+	static double big(double a, double b) {
+		//1.
+		//if(a>b) {
+		//	return a;
+		//}
+		//else {
+		//	return b;
+		//}
+		//2. 
+		//return a>b?a:b;
+		//3.
+		//if(a>b) {
+		//	return a;
+		//}
+		//return b;
+	}
+	*/
+	public static void main(String[] args) {
+
+		Scanner s = new Scanner(System.in);
+		int a[] = new int[7];
+
+		//for (int i = 0; i < a.length; i++) {
+		//	a[i] = s.nextInt();
+		//}
+		//System.out.println(big(a));// 7개 정수 중 제일 큰값 출력
+		// 매개변수가 배열명일때,
+		// 배열을 호출할 때 배열명만 적으면 됨.
+		//System.out.println(big(5.5,5.6));
+
+	}
+}
