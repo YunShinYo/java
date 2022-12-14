@@ -1,0 +1,20 @@
+class Number{
+	static void show(int n) {
+		System.out.println(n);
+	}						//함수명이 같을 때
+	void show(double n) {	//오버로딩 : 매개변수 타입 || 매개변수 개수
+							//매개변수 개수가 다르면 상관없었던것은 오버로딩
+		System.out.println(n);
+	}
+}
+public class Ex_Methodoverriding2 {
+	public static void main(String[] args) {
+		Number n=new Number();
+		n.show(3.14);	//void show(double n)
+		
+		Number.show(20);
+		//Number가 클래스임
+		//static일 경우 객체생성없이 클래스명으로부터 직접 호출가능
+		
+	}
+}
