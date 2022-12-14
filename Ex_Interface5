@@ -1,0 +1,34 @@
+/*
+class Tv{
+	public void on() {
+		System.out.println("티비 켬");
+	}
+}
+interface Computer{
+	public void m();	//추상 메소드
+}
+class Com{
+	public void m() {	//추상메소드와 이름은 같지만 
+						//Com클래스 안에서 그냥 구현한 함수 (인터페이스에 있는거 갖고온거 아님)
+		System.out.println("컴");
+	}
+}
+class Ipad extends Tv implements Computer{	//Tv클래스를 상속받고 있고 Computer 인터페이스도 상속받고 있다.
+	Com c=new Com();
+	public void m() {	//추상메소드 몸체 구현한거
+		c.m();	//출력->컴
+	}
+	public void ip() {
+		m();	//출력->컴
+		on();	//출력-> 티비 켬
+	}
+}
+public class Ex_Interface5 {
+	public static void main(String[] args) {
+		Ipad i=new Ipad();  //출력->컴
+		//Tv t=i;	//up(부모=자식)
+		//Computer c=i; //up
+		i.ip();				//출력->티비 켬
+	}
+}
+*/
