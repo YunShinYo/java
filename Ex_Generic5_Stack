@@ -1,0 +1,55 @@
+class St<T>{
+	int n;
+	Object[] st;
+	St(){
+		st=new Object[3];
+		n=0;
+	}
+	
+	public void push(T item) {
+		if(n==3) 	//스택이 다 차있다. 요소를 삽입할 수 없다
+			return;	//함수 종료
+		
+		st[n]=item;
+		n++;
+	}
+	public T pop() {
+		if(n==0)	//스택이 비어있어 꺼낼 수 없다
+			return null;
+		
+		n--;
+		return (T)st[n];	// Object니까 String이니까 다운캐스팅해서 (T)fmf Tjwnsek.
+	}
+}
+
+public class Ex_Generic5_Stack {
+	public static void main(String[] args) {
+		St<String> s =new St<String>();
+		s.push("java");	//스택의 st[0]에 데이터가 입력된다.
+		s.push("db");	//st[1]
+		s.push("html");	//st[2]
+		
+		for(int i=0; i<3; i++) {
+			System.out.println(s.pop());
+		}
+		//Integer로 구체화시켜 저장해서 출력
+		St<Integer> n=new St<Integer>();
+		n.push(10);
+		n.push(20);
+		n.push(30);
+		
+		for(int i=0; i<3; i++) {
+			System.out.println(n.pop());
+		}
+	}
+	//출력->
+	//html
+	//db
+	//java
+	//30
+	//20
+	//10
+
+	
+
+}
