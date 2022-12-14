@@ -1,0 +1,26 @@
+/*
+class Th implements Runnable{	//Runnable 인터페이스에는 sleep()함수가 없다.
+								//->스레드 클래스로부터 가져왔다는 것을 명시해주어야한다.
+								//Thread클래스보다 Runnable 인터페이스는 다중상속일떄 많이 쓴다.  
+	String name;
+	Th(String n){
+		name=n;
+	}
+	public void run(){	
+		for(int i=0; i<10; i++) {
+			System.out.println(name);
+			try {
+				Thread.sleep(100);	//스레드 클래스로부터 가져왔다는 것을 명시해주어야한다.->sleep()은 static일것이다.
+				}					//그리고 run()메소드는 Runnable인터페이스에서 추상메소드일것이다...
+			catch(Exception e) {}
+		}
+	}
+}
+public class Ex_Thread2 {
+	public static void main(String[] args) {
+		Th t=new Th("스레드1");
+		Thread t1=new Thread(t);	//Thread 객체를 만들어주어야 한다->Thread(Runnable target)을 쓸수있다.
+		t1.start();
+	}
+}
+*/
