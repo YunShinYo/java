@@ -1,0 +1,44 @@
+/*
+class Food {
+	void show() {
+		System.out.println("음식");
+	}
+}
+class Pizza extends Food {
+	void show() {
+		super.show();
+		System.out.println("피자");
+	}
+}
+class Fo<T> { // T에 Pizza와 Food 둘다 올수있다.
+	T t;
+	void in(T t) {
+		this.t = t;
+	}
+	T out() {
+		return t;
+	}
+}
+
+public class Ex_Generic6 {
+	//? 바인드변수	//Fo<Food> f
+				//Fo<Pizza> f
+	//한개 클래스만 한개씩 올수 있다. Fo<Food, Pizza> f이렇게 올수없다
+	static void pr(Fo<? extends Food> f) {
+		Food fo=f.out();	//upcasting 작업 -> 자식에 해당되는 클래스가 호출된다. 부모쪽은 무시된다.
+		//Food fo=Food.out();
+		//Food fo=Pizza.out();
+		
+		fo.show();
+	}
+	public static void main(String[] args) {
+		Fo<Food> f1 = new Fo<Food>();
+		f1.in(new Food());
+		pr(f1);	//출력->음식
+		
+		Fo<Pizza> f2 = new Fo<Pizza>();
+		f2.in(new Pizza());
+		pr(f2);//출력->음식 피자
+	}
+}
+*/
