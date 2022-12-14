@@ -1,0 +1,14 @@
+/*
+class Cal {
+
+	static int n;
+}
+
+public class Ex_static {
+	public static void main(String[] args) {
+		Cal c = new Cal();
+		c.n = 30;
+
+	}
+}
+*/
