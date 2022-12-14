@@ -1,0 +1,25 @@
+class Circle{
+	private int r;
+	private String name;
+	//Circle 클래스 안에서만 사용가능(은닉화)
+	
+	double area() {
+		return 3.14*r*r;
+	}
+	void show() {
+		System.out.println(name);
+	}
+}
+public class Ex_class_2 {
+	public static void main(String[] args) {
+		
+		Circle c=new Circle();	//객체생성
+		//c.r=10;	//private이기 때문에 에러
+		//c.name="user2"; //private이기때문에 에러
+		
+		
+		
+		
+		
+	}
+}
