@@ -1,0 +1,64 @@
+import java.util.HashSet;
+import java.util.Iterator;
+/*
+class Num{
+	int a;
+	Num(int a){
+		this.a=a;
+	}
+	
+	//2. toString()추가
+	public String toString() {
+		return a+"";
+	}
+	public int hashCode() {
+		return a%3;	//1. 보통 기준을 정해서 그룹핑을 한다.
+		//return a;라고 해도 됨->a라는 기준을 정해준거임
+	}
+	public boolean equals(Object obj) {
+		Num num=(Num)obj;//down casting
+		if(num.a==a) {//num.a는 hashCode()에서 나온 값이고 a는 h.add()에서 받은 값이다.
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+}
+public class Ex_Hashset {
+	public static void main(String[] args) {
+		//HashSet<E> 변수이름=new HashSet<E>();
+		HashSet<Num> h=new HashSet<Num>(); 
+		
+		h.add(new Num(30));
+		h.add(new Num(40));
+		h.add(new Num(60));
+		h.add(new Num(60));
+
+		System.out.println(h);
+		//[Num@587d1d39, Num@6b57696f, Num@58c1670b, Num@5bb21b69] 출력
+		//1. 주소값이 다 다르게 나온다.
+		//2. [30, 60, 40, 60] list 구조로 출력(Iterator을 안쓰면..)
+		//3. Iterator을 쓰면 element값으로 따로따로 출력된다.
+		
+		//지금 순서유지x, 중복허용x인데 중복이 되고있다..
+		//중복된 값인데 주소값이 달라서 중복된 값이 출력되고 있다..
+		//4. hashCode()와 equals() 재정의가 필요하다.
+		//4. [30, 60, 40] 출력
+		//		30
+		//		60
+		//		40
+		//4. 중복이 안된다!
+		//->그룹핑하고 나서 equals에 들어간다..
+		//30, 40은 다른 공간에 있고 60,60은 같은 공간에 있어서 중복이 된거다(true 출력)
+		
+
+		
+		//3. Iterator 사용해서 순환
+		Iterator<Num> i=h.iterator();//Iterator : 반복자라는 뜻이다.
+		while(i.hasNext()) {
+			System.out.println(i.next());
+		}
+	}
+}
+*/
