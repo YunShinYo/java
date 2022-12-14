@@ -1,0 +1,36 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Scanner;
+import java.util.Set;
+
+public class Ex_Hashmap5 {
+	public static void main(String[] args) {
+		HashMap<String, String> h = new HashMap<String, String>();
+
+		h.put("computer", "컴퓨터");
+		h.put("coffee", "커피");
+		h.put("cream", "크림");
+
+		// 키값들을 set에 받아오겠다.
+		Set<String> key = h.keySet();
+		Iterator<String> it = key.iterator();
+		while (it.hasNext()) {
+			String k = it.next(); // coumputer
+			String v = h.get(k); // 컴퓨터
+			System.out.println(k+" "+v);
+		}
+		Scanner s=new Scanner(System.in);
+		for(int i=0; i<3; i++) {
+			System.out.println("찾을 단어?");
+			String str=s.next();	//키 cream
+			String str2=h.get(str);
+			
+			if(str2==null) {
+				System.out.println(str+"은 없는단어");
+			}
+			else {
+				System.out.println(str2);
+			}
+		}
+	}
+}
