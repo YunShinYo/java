@@ -1,0 +1,26 @@
+import java.util.ArrayList;
+
+public class Ex_Arraylist1 {
+
+	public static void main(String[] args) {
+		//List Interface => 
+		//리스트 인터페이스: 순서유지!, 중복 허용
+		//ArrayList<E> a=new ArrayList<E>();
+		
+		//예)맛집 웨이팅 리스트->ArrayList사용(순차배열구조)
+		
+		ArrayList<String> a=new ArrayList<String>();
+		a.add("user1");	//add() : 컬렉션 객체에 추가한다(순차배열)
+		a.add("user2");
+		a.add("user3");
+		a.add("user3");	//중복허용
+		
+		a.remove(0);	//0인 user1을 리스트에서 지우겠다->삭제
+		
+		for(int i=0; i<a.size(); i++) {	//a.size() -> 3
+			String b=a.get(i);
+			System.out.println(b);
+		}
+	}
+}
+
