@@ -1,0 +1,67 @@
+/*
+class Share{
+	synchronized void pr(String str) {	//안,녕,하,세,요 를 하나하나씩 출력해보겠다.
+		for(int i=0; i<str.length(); i++) {
+			System.out.print(str.charAt(i));
+		}
+		System.out.println();
+	}
+}
+
+class Th1 extends Thread{
+	Share s;
+	String str[];
+	
+	Th1(Share s, String []str){
+		this.s=s;
+		this.str=str;
+	}
+	
+	public void run() {
+		for(int i=0; i<str.length; i++) {
+			s.pr(str[i]);
+		}
+	}
+}
+public class Ex_Thread5 {
+	
+	public static void main(String[] args) {
+		Share s=new Share();
+		
+		String eng[]= {"java", "study", "db", "spring", "jsp"};
+		String kor[]= {"자바", "공부", "데이터베이스", "스프링", "제이에스피"};
+		
+		Th1 t1=new Th1(s, eng);
+		Thread t2=new Th1(s, kor);	//이렇게 적은 이유는 무엇이냐면... -> upcasting 작업
+		//공통으로 쓰는 함수 pr()을 앞에 synchronized함수를 쓰겠다. : 끼어들지 못하게 하겠다 
+		//synchronized 함수 : 공통적으로 쓰는 필드 또는 함수에 접근할 때 쓴다.
+		
+		
+		t1.start();
+		t2.start();
+		
+		//출력->
+		//java
+		//study
+		//db
+		//spring
+		//jsp
+		//자바
+		//공부
+		//데이터베이스
+		//스프링
+		//제이에스피
+		
+		//출력중에 끼어드는 현상을 없앤다->
+		//자java
+		//st바udy
+		//db
+		//spring
+		//jsp
+		//공부
+		//데이터베이스
+		//스프링
+		//제이에스피
+	}
+}
+*/
