@@ -1,0 +1,74 @@
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+class Stu implements Serializable{
+	private static final long serialVersionUID=-150;	//초기화 안해도 컴파일러가 알아서 할당해주기때문에 굳이 안적어줘도 된다. 
+	private String name;
+	private String id;
+	transient private int age;//transient: 일시적인, 직렬화에서 제외된다(null값이나 0이 나온다.)
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+}
+
+public class Ex_Serialization {
+
+	public static void main(String[] args) throws IOException {
+		//직렬화 : 객체를 저장하는 작업
+		//역직렬화 : 객체를 읽어들이는 작업
+		
+		//FileOutputStream(주인공) : 파일 생성
+		//ObjectOutputStream oos(장식)
+		//oos.writeObject(object);	//객체 저장하는 메소드
+		//FileInputStream(주인공)
+		//ObjectInputStream ois(장식)
+		//Object object=(Object)ois.readObject();	//반환형이 Object이다.(다운캐스팅한다.)
+
+		//모든 클래스는 Object클래스를 상속받고 있다.
+		
+		ObjectOutputStream os=null;
+		try{
+			os=new ObjectOutputStream(new FileOutputStream("ob.dat"));
+			Stu s=new Stu();
+			s.setName("user");
+			s.setId("123");
+			s.setAge(22);
+			
+			os.writeObject(s);
+		}catch(Exception e) {}
+			os.close();
+			
+			ObjectInputStream in=null;
+			try {
+				in=new ObjectInputStream(new FileInputStream("ob.dat"));
+				
+				Stu s=(Stu)in.readObject();	//형변환
+				
+				System.out.println(s.getName());
+				System.out.println(s.getId());
+				System.out.println(s.getAge());
+			}
+			catch(Exception e) {}
+			in.close();
+	}
+}
