@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+/*
+class Profile{
+	String id;
+	int age;
+	Profile(String id, int age){
+		this.id=id;
+		this.age=age;
+	}
+}
+public class Ex_Arraylist2 {
+	public static void main(String[] args) {
+		
+		ArrayList<Profile> a=new ArrayList<Profile>();
+		a.add(new Profile("aa",12));
+		a.add(new Profile("bb",17));
+		a.add(new Profile("cc",15));
+		
+		for(int i=0; i<a.size(); i++) {
+			Profile p=a.get(i);
+			System.out.println(p.id+" "+p.age);
+			
+			//출력->
+			//aa 12
+			//bb 17
+			//cc 15
+		}
+	}
+}
+*/
