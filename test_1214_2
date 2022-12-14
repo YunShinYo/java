@@ -1,0 +1,91 @@
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+class Person {
+	int num;
+	String name;
+
+	Person(int num, String name) {
+		this.num = num;
+		this.name = name;
+	}
+
+	public int hashCode() {
+		return num;
+	}
+
+	public boolean equals(Object obj) {
+		Person p = (Person) obj;
+		if (p.num == this.num) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
+
+public class test_1214_2 {
+	static int add(int a[], int b) {
+		int sum = 0;
+		for (int i = 0; i < b; i++) {
+			sum += a[i];
+		}
+		return sum;
+	}
+
+	static int add(int a[], int b, int c[]) {
+		int sum = 0;
+		for (int cc : c) {
+			sum += cc; // 6~10합+1~5합
+		}
+		return sum + add(a, b);
+	}
+
+	public static void main(String[] args) {
+
+		// TODO Auto-generated method stub
+		// 5. HashSet에 Person객체를저장한다. 학번이같으면 동일한 Person객체라 판단하고
+		// 중복저장이 되지 않도록 하게 코드를 작성해라.
+		// Set<Person> s=new HashSet<Person>();
+		// s.add(new Person(12, “홍길동”));
+		// s.add(new Person(23, “김길동”));
+		// s.add(new Person(12, “이길동”));
+		// Iterator<Person> it=s.iterator();
+		// while(it.hasNext()){
+		// Person p=it.next();
+		// System.out.println(p.num + “ “ + p.name);
+		// }
+		Set<Person> s = new HashSet<Person>();
+
+		s.add(new Person(12, "홍길동"));
+		s.add(new Person(23, "김길동"));
+		s.add(new Person(12, "이길동"));
+
+		Iterator<Person> it = s.iterator();
+		while (it.hasNext()) {
+			Person p = it.next();
+			System.out.println(p.num + " " + p.name);
+		}
+
+		// 6. Main()을보고코드를작성해라.(c는 1~5까지 합, d는 1~10까지 합)
+		// int a[]={1,2,3,4,5};
+		// int b[]={6,7,8,9,10};
+		// int c=add(a,5);
+		// int d=add(a,5,b);
+		// System.out.println(c);
+		// System.out.println(d);
+		int a[] = { 1, 2, 3, 4, 5 };
+
+		int b[] = { 6, 7, 8, 9, 10 };
+
+		int c = add(a, 5);
+
+		int d = add(a, 5, b);
+
+		System.out.println(c); // 1~5까지합
+
+		System.out.println(d); // 1~10까지합
+	}
+
+}
