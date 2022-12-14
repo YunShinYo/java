@@ -1,0 +1,34 @@
+/*
+interface PhoneInterface{
+	int BUTTONS=20;	//상수 필드 선언(public static이 생략되어있다)
+	void sendCall();	//추상 메소드(public abstract이 생략되어있다)
+	void receiveCall();//추상 메소드(public abstract이 생략되어있다)
+}		
+interface A extends PhoneInterface{	//extends로 상속선언->PhoneInterface를 상속받은 인터페이스 A
+	void sendCall();
+	void receiveCall();
+}
+interface B{}
+interface C{}
+class D{}
+interface AA extends B, C{}	//(o)
+class AAA implements B,C{}	//(o)
+//interface A implements B,C{}//(x)
+class AAAA extends D implements B,C{}//(o)
+//클래스 상속과 인터페이스 구현을 동시에 할 수 있다.
+public class Ex_Interface6 {
+
+	public static void main(String[] args) {
+		//자바 인터페이스
+		//(상수와 추상 메소드로 구성)
+		//객체 생성 불가
+		//인터페이스 간 상속 가능
+		
+
+		
+		
+		
+	}
+
+}
+*/
