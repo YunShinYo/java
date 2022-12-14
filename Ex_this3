@@ -1,0 +1,43 @@
+class Book{
+	String title;
+	String author;
+	int ISBN;
+	
+	public Book(String title, String author, int ISBN) {
+		this.title=title;
+		this.author=author;
+		this.ISBN=ISBN;
+	}
+	public Book(String title, int ISBN) {
+		this(title, "anonymous", ISBN);
+	}
+	public Book() {
+		this(null, null, 0);
+		System.out.println("생성자가 호출되었음");
+	}
+	void show() {
+		System.out.println(title+" "+author+" "+ISBN);
+	}
+}
+public class Ex_this3 {
+	public static void main(String[] args) {
+		Book javaBook=new Book("Java JDK", "황기태",3333);
+		Book holyBible=new Book("Holy Bible",1);
+		Book emptyBook = new Book();	//기본생성자
+		
+		//b3.show();
+		javaBook.show();
+		holyBible.show();
+		emptyBook.show();
+		
+		//생성자가 호출되었음	
+		//Java JDK 황기태 3333
+		//Holy Bible anonymous 1
+		//null null 0
+		//->기본생성자가 출력되고 null, null, 0값이 초기화된다. 생성자가 호출되었음이 출력된다
+		//->java jdk, 황기태, 3333이 출력된다
+		//->holy bible, anonymous, 1이 출력된다
+		//->null, null, 0이 출력된다. 
+		
+	}
+}
