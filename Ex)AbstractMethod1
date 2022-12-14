@@ -1,0 +1,40 @@
+/*
+//class Car{//->error난다.(추상메소드가 있어서 추상클래스가 있어야한다.)
+abstract class Car{
+	//abstract 예약어는 클래스 앞에 적어주고 생략이 불가능하다.
+	String name; //필드
+	void run() {	//일반적인 메소드
+		System.out.println("차가 움직인다.");
+	}
+	//abstract void stop() {	//추상메소드 (빈껍데기 함수) ->error!
+	//	
+	//}
+	abstract void stop(); //->선언만 해야 한다.(오류안남)
+}
+class Cars extends Car{
+	Cars(){
+		name="인피니티";
+	}
+	void stop() { 
+		System.out.println("차가 멈춘다");	
+	}	//-> 중요한 부분임★
+		//오버라이딩의 개념이다.(재정의함->사실은 위에서 못하니까 그냥 가지고 온거임..)
+}
+//추상클래스안에는 일반적인 메소드, 추상 메소드 둘 다 가능
+//그러나 추상메소드는 반드시 추상클래스 안에 있어야 한다!!!!
+public class Ex_Abstractmethod1 {
+
+	public static void main(String[] args) {
+		//껍데기만 있음
+		//구체적이지 않은 클래스
+		//abstract int add(int x, int y);	//->중괄호없이 세미클론으로 끝난다. 선언만 함
+		//=>구현은 상속받아서 한다.
+		//추상클래스는 객체(인스턴스)생성을 할수없다->모든 코드가 구현되지 않았으므로
+		
+		Cars c=new Cars();
+		c.run();
+		c.stop();
+		
+	}
+}
+*/
