@@ -1,0 +1,39 @@
+/*
+interface Re {
+	int area();	//public abstract을 굳이 안적어도 추상메소드로 지정되어 있다.
+	default void show() {
+		System.out.println("사각형!!");
+	}
+}
+
+class Rec implements Re {
+	private int x, y;
+	Rec(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+	@Override
+	public int area() {	//public abstract int area()인데 이제 추상이 아니니까 abstract은 지워준다
+		return (x*y);
+	}
+}
+
+public class test_1207_4 {
+	public static void main(String[] args) {
+		// 6. main()를 보고 인터페이스를 작성해라.
+		// (인터페이스명은 Re, 모든 메소드들을 인터페이스안에서 선언하고
+		// show함수는 default로 설정,area는 abstract로 설정)
+		// main(){
+		// Re r=new Rec(10,20);
+		// r.show(); //"사각형!!" 출력
+		// System.out.println(“면적” + r.area());
+		// 실행결과) 사각형!!
+		// 면적 200
+
+		Re r = new Rec(10, 20);	//upcasting
+		r.show(); // "사각형!!" 출력
+		System.out.println("면적 " + r.area());
+	}
+}
+
+*/
