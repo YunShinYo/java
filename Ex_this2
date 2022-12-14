@@ -1,0 +1,41 @@
+/*
+ class Book{	//생성자의 역할은 초기화하는 것이 목적이다.
+ 
+	String a;
+	int b;
+	
+	Book(String a, int b){
+		this.a=a;
+		this.b=b;
+	}
+	Book(String a){
+		this(a,0);	//다른 생성자 호출->{}증괄호 안쪽 블록이 실행
+	}
+	Book(){	//기본 생성자
+		this("",0);	//다른 생성자 호출
+		System.out.println("생성자 호출!");
+	}
+	
+	void show(){
+		System.out.println(a+" "+b);
+	}
+	
+}
+public class Ex_this2 {
+	public static void main(String[] args) {
+		Book b1 = new Book("고양이", 30000);	//파라미터가 2개 있는 생성자
+		Book b2 = new Book("총균쇠"); //파라미터가 1개 있는 생성자
+		Book b3 = new Book();	//기본 생성자
+		
+		b1.show();
+		b2.show();
+		b3.show();
+	
+		//생성자 호출!
+		//고양이 30000
+		//총균쇠 0
+		// 0
+	}
+	
+}
+*/
