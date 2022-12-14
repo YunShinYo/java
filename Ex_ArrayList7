@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Ex_Arraylist7 {
+
+	public static void main(String[] args) {
+		/*어레이리스트에서 박싱언박싱 개념 check!
+		ArrayList<Double> a=new ArrayList<Double>();
+		a.add(4.5);//자동박싱
+		double d=a.get(0);	//자동 언박싱
+		*/
+		//컬렉션의 순차 검색을 위한 Iterator<E>
+		//: List, Vector, LinkedList, Set, Map..
+		ArrayList<Integer> v=new ArrayList<Integer>();
+		v.add(new Integer(4));
+		v.add(14);
+		v.add(24);
+		
+		//for문으로 해도 되는데 iterator함수가 있어서 많이 쓴다
+		Iterator<Integer> it=v.iterator();	//어레이리스트 v의 요소를 순차 검색할 Iterator 객체 리턴
+		//E의 값이 컬렉션 프레임워크에 해당하는 v값과 같지 써야한다.
+		//여기에서 E는 v값이고 v값은 Integer임
+		
+		while(it.hasNext()) {	//다음 반복에서 사용할 값이 있으면 true리턴
+			int n=it.next();	//값 리턴 it요소 타입은 Integer이므로 정수리턴
+			System.out.println(n);
+		}
+	}
+}
