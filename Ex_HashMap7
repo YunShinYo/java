@@ -1,0 +1,22 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+
+public class Ex_Hashmap7 {
+	public static void main(String[] args) {
+		HashMap<String, String> a=new HashMap<>();
+		a.put("aa","123");
+		a.put("bb","12");
+		a.put("cc","1");
+
+		Set<String> s=a.keySet();	//모든 키를 Set컬렉션에 받아옴	
+		Iterator<String> it=s.iterator();
+		//해시맵의 키 s의 요소를 순차 검색할 Iterator 객체 리턴
+		
+		while(it.hasNext()) {
+			String key=it.next();
+			String value=a.get(key);
+			System.out.println(key+" "+value);
+		}
+	}
+}
