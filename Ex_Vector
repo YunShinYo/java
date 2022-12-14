@@ -1,0 +1,31 @@
+import java.util.Vector;
+
+public class Ex_Vector {
+
+	public static void main(String[] args) {
+		//List 3가지
+		//1. ArrayList
+		//2. Vector
+		//3. LinkedList
+		
+		Vector<Integer> v=new Vector<Integer>();	//일종의 제네릭으로 구현되고 있다
+		
+		//v.add(new Integer(5));	//원래 객체니까 이렇게 넣어줘야 되는데
+		v.add(5);//매개변수로 E e		//이렇게 써도 에러가 안나는 이유는... -> 오토박싱때문이다
+		v.add(10);
+		v.add(0, 20);	//인덱스 0에 20을 넣겠다
+		
+		System.out.println("벡터 개수 "+v.size());
+		for(int i=0; i<v.size(); i++) {
+			Integer num=v.get(i);	//원래는 객체를 적어줘야 된다.(오토언박싱)
+			//int num=v.get(i);
+			System.out.println(num);
+		}
+		
+		//출력->
+		//벡터 개수3
+		//20
+		//5
+		//10
+	}
+}
