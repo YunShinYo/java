@@ -1,0 +1,21 @@
+import java.util.HashMap;
+
+public class Ex_Hashmap6 {
+	public static void main(String[] args) {
+		HashMap<String, String> a=new HashMap<>();
+		a.put("aa","123");
+		a.put("bb","12");
+		a.put("cc","1");
+		//HashMap은 순차구조가 아님 -> iterator를 쓸 수 없다(인덱스로 접근하는 것이 아니다. 키값으로 접근한다.)
+		//keySet()으로 접근한다..
+		//List구조는 순차구조이고 인덱스로 접근 한다.
+		
+		String str=a.get("aa");	//키 값으로 밸류값 찾는건 있어도 밸류값으로 키값찾는건 없다고 함
+		System.out.println(str);
+		
+		a.remove("bb");
+		System.out.println(a);	//출력->{aa=123, cc=1}	:배열형태로 출력된다(리스트가 일종의 배열형태)
+		
+
+	}
+}
