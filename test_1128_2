@@ -1,0 +1,42 @@
+public class test_1128_2 {
+	public static void main(String[] args) {
+		/*
+		 // 1. 50+11.8의 결과를 소수점을 버리고 출력해라.
+		 
+		int sum = (int) (50 + 11.8);
+		System.out.println(sum);
+		// 2. 0~30까지 수 중에서 5의 배수를 제외하고 출력해라.
+		// (무한 반복문과 break, continue를 다 사용하여 출력)
+		//내가 한거
+		int i = 0;
+		while (true) {
+			if(i%5==0) {
+				continue;
+			}
+			if(i>30) {
+				break;
+			}
+			System.out.println(i);
+			i++;
+		}
+		
+*/
+		//강사님이 한거
+		int i=0; 
+		while(true) {
+			if(i/5==0) {
+				System.out.println(i);
+			}
+			else if(i%5==0) {
+			}
+			else if(i>30) {
+				break;
+			}
+			else {	//5의 배수가 아니면서 30보다 크지 않다.
+				System.out.println(i);
+			}
+			i++;
+			
+		}
+	}
+}
