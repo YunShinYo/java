@@ -1,0 +1,9 @@
+
+public class Ex_Polymorphism {
+
+	public static void main(String[] args) {
+		//다형성은 상속이 기본개념으로 깔고 들어간다.
+		
+	}
+
+}
