@@ -1,0 +1,29 @@
+import java.io.FileWriter;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
+public class Ex_FileIO5 {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		//1. Scanner
+		//2. System.in
+		//3. InputStream
+		
+		InputStreamReader in = new InputStreamReader(System.in);
+		//키보드로부터 읽는 문자 입력 스트림 형성
+		FileWriter out=null;
+		int r;
+		try {
+			out=new FileWriter("java2.txt");
+			//파일과 연결된 출력 문자 스트림 형성
+			
+			while((r=in.read())!=-1) {
+			//키보드로부터 입력받은 문자를 파일에 저장하기
+				out.write(r);
+			}
+			in.close();
+			out.close();
+		}catch(Exception e) {}
+	}
+}
