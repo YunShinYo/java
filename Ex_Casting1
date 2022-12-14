@@ -1,0 +1,41 @@
+/*
+class Person {
+	String name;
+	String id;
+
+	Person(String name) {
+		this.name = name;
+	}
+}
+
+//student클래스 짜기(person 상속받아)
+class Student extends Person {
+	Student(String name) {
+		super(name);
+	}
+}
+
+public class Ex_Casting_up_down_1 {
+
+	public static void main(String[] args) {
+		//동물
+		//강아지 고양이
+		
+		//동물은 강아지다
+		//동물은 고양이다 ..down->명시적(강제) 형변환
+		//부모쪽은 어떤 하위 클래스인지 명시를 해주어야한다.
+		//부모는 자식이 너무 많아서..
+		
+		//강아지는 동물이다
+		//고양이는 동물이다 ..up -> 묵시적 형변환
+		
+		Person p = new Student("길동");	//upcasting
+		// Student s=new Student("길동");
+	
+		Student s=(Student)p;	//downcasting
+		System.out.println(s.name);
+	}
+
+}
+
+*/
