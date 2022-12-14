@@ -1,0 +1,60 @@
+/*
+class Person{
+	
+}
+class Student extends Person{
+	
+}
+class Entertainer extends Person{
+	
+}
+class Singer extends Entertainer{
+	
+}
+public class Ex_Instaceof2 {
+	static void pr(Person p) {
+		if(p instanceof Person) {
+			System.out.println("사람");
+		}
+		if(p instanceof Student) {
+			System.out.println("학생");
+		}
+		if(p instanceof Entertainer) {
+			System.out.println("연예인");
+		}
+		if(p instanceof Singer) {
+			System.out.println("가수");
+		}
+	}
+	public static void main(String[] args) {
+		//Animal hAnimal=new Human();	//up
+		//Animal hAnimal=new Tiger();	//up
+		//Animal hAnimal=new Eagle();	//up
+		//hAnimal은 Human과 같다.
+		//hAnimal은 Tiger과 같다.
+		//hAnimal은 Eagle과 같다.
+		
+		//if(hAnimal instanceof Human) {
+		//	Human human=(Human)hAnimal;	//down(강제)
+		//}
+		
+		
+		//--------------------------------------------
+		//Person(조부모)
+		//Student	Entertainer(부모)
+		//			Singer		(자식)
+				//함수호출
+		//다형성 : 함수에 매개변수로 객체생성하는 생성자코드를 넣어준다.
+		//pr함수 위치는 public class Ex_Instaceof 내부이다.
+		pr(new Student());	//Person p=new Student(); //up
+		//->출력 사람학생 사람 사람
+		//new Student()가 사람이자 학생이다!
+		pr(new Entertainer());	//Person p=new Entertainer(); //up
+		//->출력 사람학생 사람연예인 사람연예인
+		pr(new Singer());	//Person p=new Singer(); //up
+		//->출력 사람학생 사람연예인 사람연예인가수
+		
+		
+	}
+}
+*/
