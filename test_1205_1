@@ -1,0 +1,51 @@
+import java.io.FileWriter;
+import java.io.InputStreamReader;
+/*
+class Student{
+	String name;
+	String lastName;
+
+	Student(String name, String lastName){
+		this.name=name;
+		this.lastName=lastName;
+		
+	}
+	void pr() {
+		System.out.println(name+" "+lastName);
+	}
+	
+	
+	
+}
+public class test_1205_1 {
+
+	public static void main(String[] args) {
+	/*
+		// 1. 입력받은 텍스트를 java.txt파일에 저장하는 프로그램을 작성해라. (InputStreamReader, FileWriter 사용)
+		FileWriter out = null;
+
+		try {
+			InputStreamReader in = new InputStreamReader(System.in);
+			out = new FileWriter("java.txt");
+			int r;
+			
+			while ((r = in.read()) != -1) {
+				out.write(r);
+			}
+			in.close();
+			out.close();
+		} catch (Exception e) {}
+
+		// 2.main()를 보고 클래스를 작성해라.
+		// Student s1=new Student(“김길동”, “kim”);
+		// Student s2=new Student(“이길동”, “lee”);
+		// s1.pr(); s2.pr(); //모든 데이터 출력
+		Student s1=new Student("김길동", "kim");
+		Student s2=new Student("이길동", "lee");
+		s1.pr();
+		s2.pr();
+
+	}
+
+}
+*/
