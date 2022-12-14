@@ -1,0 +1,40 @@
+public class Ex_Wrapper_boxing_unboxing {
+	public static void main(String[] args) {
+		Integer i=new Integer(10); 	//boxing
+		//Integer i2=10;				//auto boxing
+		int i1=i.intValue();	//unboxing:int값 가져오기
+		//intValue()와 parseInt()와 차이점 : 두줄 코드를 parseInt()로 한줄로 구현하는 것과 같다.
+		
+		//intValue() : 언박싱
+		//valueOf) : 박싱
+		//parseInt():언박싱
+		 
+		Character c=new Character('a');
+		char c1=c.charValue();	//언박싱
+		
+		Boolean b=new Boolean(true);
+		boolean b1=b.booleanValue();	//언박싱
+		
+		//문자열을 기본타입으로 변환!
+		int i2=Integer.parseInt("123");	//언박싱:"123"을 받아서 기본타입으로 바꿔준다.
+		boolean b2=Boolean.parseBoolean("true");
+		double d2=Double.parseDouble("3.14");
+		//parse~~~~ 반환형이 기본자료형
+		
+		int i3=Integer.valueOf(123);	//오토언박싱
+		int i4=Integer.valueOf("10")+Integer.valueOf("20");	//박싱+박싱한 값을 언박싱한 공간에 넣는다.->오토언박싱
+		
+		//valueOf는 반환형이 객체
+		System.out.println(i4);	//출력-> 30
+		//사실 개발할때 valueOf()많이 안쓰고 parse~~~를 많이 쓴다.
+		
+		//정수형 객체 123을 문자열로 반환
+		String s=Integer.toString(123);	//static메소드임
+								//오버로딩한거라서 함수이름이 같다
+		System.out.println(s);	//출력-> 123
+		
+		Integer i11=100;	//오토박싱
+		int n1=i11+200;		//오토언박싱
+		System.out.println(n1); //출력->300
+	}
+}
