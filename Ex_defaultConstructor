@@ -1,0 +1,6 @@
+public class Ex_defaultconstructor {
+	public static void main(String[] args) {
+		//오버로딩이 여러개 작성 가능한거임
+		//오버로딩이 오버라이딩보다 더 큰 개념
+	}
+}
