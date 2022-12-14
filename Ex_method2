@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class Ex_method_2 {
+	/*
+	static void cal(char a, int b, int c) {
+		switch(a) {
+		case '+':
+			System.out.println(b+c);
+			break;
+		case '-':
+			System.out.println(b-c);
+			break;
+		default :
+			System.out.println("없는 값임");
+			break;
+		}
+	}
+	
+	//
+	static int in(int n) {
+		return n;
+	}
+	
+	//
+	static int in() {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		return n;
+	}*/
+	public static void main(String[] args) {
+		/*
+		//
+		Scanner s = new Scanner(System.in);
+		char a=s.next().charAt(0);
+		int b = s.nextInt();
+		int c = s.nextInt();
+		cal(a, b, c); // +를 입력하면 b+c
+			          // -를 입력하면 b-c (switch~case)
+		
+		//
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		System.out.println(in(n));
+		
+		//내가 입력한 정수 출력
+		 
+		
+		//
+		System.out.println(in());
+		*/
+	}
+
+}
