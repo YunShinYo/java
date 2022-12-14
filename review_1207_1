@@ -1,0 +1,21 @@
+class Num {
+	int a;
+
+	Num(int a) {
+		this.a = a;
+	}
+
+	int get() {
+		return a;
+	}
+}
+
+public class review_1207_1 {
+	public static void main(String[] args) {
+
+		Num[] ary = new Num[] { new Num(1), new Num(2), new Num(3) };
+		for (Num i : ary) {		//향상된 for문
+			System.out.println(i.get());
+		}
+	}
+}
