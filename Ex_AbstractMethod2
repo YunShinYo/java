@@ -1,0 +1,30 @@
+/*
+abstract class Ca {
+	abstract int add(int a, int b);
+	abstract double avg(int a[]);
+}
+
+class Cal extends Ca {
+	int add(int a, int b) {
+		return a + b;
+	}
+
+	double avg(int a[]) { // int a[]=new int[]{1,2,3}
+		int sum = 0;
+
+		for (int k : a) {
+			sum += k;
+		}
+		return (sum / a.length);
+	}
+}
+
+public class Ex_Abstractmethod2 {
+	public static void main(String[] args) {
+		// 추상클래스는 객체생성이 불가능하므로 Ca클래스로부터 객체생성은 안된다.
+		Cal c = new Cal();
+		System.out.println(c.add(3, 7));
+		System.out.println(c.avg(new int[] { 1, 2, 3 }));
+	}
+}
+*/
