@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class test_1123 {
+
+	public static void main(String[] args) {
+		System.out.println("1.	10/4 한 결과값을 소수점까지 출력해라");
+		System.out.printf("%.1f\n", (double)10/4);
+//		double r1 =(double)10/4;
+//		System.out.println(r1);
+//		double r2 = 10/4.0;
+//		System.out.println(r2);
+		
+		
+		System.out.println("2.	하나의 정수를 입력받아 그 수의 제곱을 구해라.");
+		Scanner s = new Scanner(System.in);
+		System.out.println("하나의 정수를 입력해라");
+		int n=s.nextInt();
+		//System.out.println(Math.pow(n, 2));
+		System.out.println("제곱은 "+(n*n)+"입니다");
+//		int n = s.nextInt();
+//		//n*=n;
+//		System.out.println(n*n);
+
+		
+		System.out.println("3.	a를 4.0, b를 1.2로 초기화하여 4.0+1.2를 printf로 출력해라.");
+		//실행 결과) 4.0+1.2=5.2
+		double a=4.0, b=1.2;
+		System.out.printf("%.1f+%.1f=%.1f\n", a,b,a+b);
+//		double a=4.0, b=1.2;
+//		double sum=a+b;
+//		System.out.printf("%.1f\n", sum);
+		
+		System.out.println("3-1. 앞에서 출력한 5.2를 소수점을 버려라. ");
+		System.out.println((int)(a+b));
+		//System.out.printf("%.0f \n", (float)sum);
+		
+
+		System.out.println("4.	sanner클래스를 이용하여 이름, 사는 곳, 나이, 체중을 입력받고, 출력하는 프로그램 작성해라.");	
+		//실행 결과) 입력해라: kim seoul 29 65.5
+		//                    내 이름은 kim이다.
+		//                    사는 곳은 seoul이고, 나이는 29살이다.
+		//                    몸무게는 65.5kg이다.
+		String name=s.next();
+		String addr=s.next();
+		int age=s.nextInt();
+		double weight=s.nextDouble();
+		System.out.print("입력해라: ");
+		System.out.printf("내 이름은 %s이다. \n사는 곳은 %s이고,나이는 %d살이다.\n몸무게는 %.1fkg이다.",name,addr,age,weight);
+
+	}
+
+}
