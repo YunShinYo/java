@@ -1,0 +1,37 @@
+/*class Student {
+	String name;
+	int age;
+
+	Student(String a, int b) {
+		name = a;
+		age = b;
+	}
+
+	Student(String a) {
+		name = a;
+	}
+
+	Student (){
+		
+		name="승주";
+		age=20;
+	}
+void pr() {
+	System.out.println(name+" "+age);
+}
+
+}
+
+public class Ex_class6 {
+	public static void main(String[] args) {
+
+		Student s = new Student("현석", 29);	//현석 29
+		Student s2 = new Student("한희");	//한희 0 -> 생성자 만들 떄 값을 안보내줬기 때문에 초기값 0을 출력한다. 
+		Student s3 = new Student();	//승주 20
+		s.pr();
+		s2.pr();
+		s3.pr();
+
+	}
+}
+*/
