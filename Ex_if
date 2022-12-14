@@ -1,0 +1,170 @@
+import java.util.Scanner;
+public class Ex_if {
+	public static void main(String[] args) {
+		/*Scanner s = new Scanner(System.in);
+		System.out.println("자바 점수 입력해라");
+		//정수로 입력받아라.
+		int score=s.nextInt();
+		
+		if(score>=90) {
+			System.out.println("합격!");
+		}
+		else {	//score<90
+			System.out.println("불합격!");
+		}
+		
+		System.out.println("정수입력 : ");
+		int n=s.nextInt();
+		
+		if(n%2==0) {//n을 2로 나눴을 때 나머지가 0과 같으면
+					//%의 이용 사례 : 홀수 짝수 판별
+			System.out.println("짝수, 2의배수이다");
+		}
+		else {	//n%2!=0
+			System.out.println("홀수, 2의배수 아니다");
+		}
+		*/
+		
+		/*
+		int a=10, b=4;
+		if(a==10) {	//참이기때문에 밑부분 조건 확인안함
+			System.out.println("A");			
+		}
+		else if(a<b) {	//a>b가 참이어도 B는 출력이 안된다
+						//앞의것이 참이면 뒤의것이 출력이 안된다
+			System.out.println("B");
+		}
+		else if(a>b) {
+			System.out.println("C");
+		}
+		
+		
+		int a=10, b=4;
+		if(a==10) {	//A출력된다
+			System.out.println("A");
+		}
+		if(a>b) {	//C출력된다
+			System.out.println("C");
+		}
+		*/
+		//조건 연산자 ?:sms if-else로 바꿀 수 있음
+		//ex) i=조건?t:f;
+		//ex) i=(a>b)?a-b:b-a;는  
+		//if(a>b)
+		//i=a-b;
+		//else
+		//i=b-a; 와 같다
+		
+		/*
+		Scanner s = new Scanner(System.in);
+		System.out.println("점수 입력해!");
+		int kor=s.nextInt();
+		char grade;
+		
+		if(kor>=90) {
+			grade='A';
+		}
+		else if(kor>=80) {	//참이긴 참이지만 출력안된다
+			grade='B';
+		}
+		else if(kor>=70) {	//참이긴 참이지만 출력안된다
+			grade='C';
+		}
+		else {	//위 조건 다 만족못함
+			grade='F';
+		}
+		System.out.println("학점: "+grade);
+		 */
+		
+		/*
+		//삼항 조건 연산자
+		//90점 이상이면 A 아니면 B
+		//조건식? true:false
+		//조건식이 참이면 ?뒤가 실행
+		//거짓이면 :뒤가 실행
+		
+		int score=85;
+		char grade=score>=90?'A':'B';
+		System.out.println("학점은 "+grade);
+		*/
+		/*
+		int total=300;
+		double avg=300/3.0;
+		if(avg>=90) {
+			System.out.println("A");
+		}
+		else if(80<=avg && avg<90) {
+			System.out.println("B");
+		}
+		else if(avg>=70) {
+			System.out.println("C");
+		}
+		else {
+			System.out.println("F");
+		}
+		*/
+		
+		//중첩 if문1
+		int a=20, b=10;
+		if(a<10) {	//선행조건
+			if(b>=0) {
+				b=1;
+			}
+			else {	//b<0
+				b=-1;
+			}
+		}
+		System.out.println(a+" "+b);
+		
+		//중첩 if문2
+		int age=15,kg=60;
+		char size;
+		
+		if(age<20) {
+			if(kg<50) {
+				size='S';
+			}
+			else if(kg<60) {
+				size='M';
+			}
+			else {
+				size='L';
+			}
+		}
+		else {	//age>=20
+			if(kg<60) {
+				size='S';
+			}
+			else if(kg<70) {
+				size='M';
+			}
+			else {	//kg>=70
+				size='L';
+			}
+		}
+		System.out.println(size);
+		
+		//중첩 if문3
+		Scanner s = new Scanner(System.in);
+		System.out.println("점수 입력: ");
+		int score=s.nextInt();
+		
+		System.out.println("학년 입력: ");
+		int year=s.nextInt();
+		
+		if(score>=60) {	//75 4
+			if(year!=4) {	//4학년이 아니면
+				System.out.println("합격");
+			}
+			else if(score>=70) {//4학년이면서 70점 이상일 때
+				System.out.println("합격");
+			}
+			else {	
+				System.out.println("불합격");	//4학년이 70점 미만
+			}
+		}
+		else {	//60점 미만일때
+			System.out.println("불합격");
+		}
+	}
+}
