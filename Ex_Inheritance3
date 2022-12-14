@@ -1,0 +1,32 @@
+/*
+class Song {
+	//protected String title;
+
+	
+	Song() {
+		System.out.println("BTS");
+	}
+}
+
+class A extends Song { // 상속
+	A() {
+		System.out.println("아이유");
+	}
+}
+
+class B {
+}
+
+public class Ex_inheritance3 {
+
+	public static void main(String[] args) {
+		A a = new A();
+		//a.title = "aa"; // 하위클래스에서 사용이 가능하다
+
+		//B b = new B();
+		// b.title="bb";//사용이 불가능하다
+	}
+
+}
+
+*/
