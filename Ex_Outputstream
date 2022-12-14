@@ -1,0 +1,37 @@
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.util.Arrays;
+
+public class Ex_Outputstream {
+
+	public static void main(String[] args) {
+		//OutputStream : 모든 ~OutputStream들은 모두 OuputStream의 자손들이다.
+		//**매개변수에 OutputStream 자료형 변수가 없다면 기반스트림이고 있으면 보조스트림이라고 구분할숭 씨다.
+		//1,2,3,4,5를 읽어와서 outputstream에 저장하고 싶다
+		byte[] in = {1,2,3,4,5};
+		byte[] out=null;
+		
+		ByteArrayInputStream input=null;
+		ByteArrayOutputStream output=null;
+		
+		output=new ByteArrayOutputStream();//저장->출력
+		input = new ByteArrayInputStream(in);
+			
+		//input, Reader ->read()
+		//output, Writer ->write()
+		
+		int r=-1;
+		while((r=input.read())!=-1) {
+			//System.out.println(r);	//1,2,3,4,5 출력됨
+			output.write(r);	//스트림에 저장
+		}
+		//System.out.println(r);	//-1 출력됨
+		
+		out=output.toByteArray();	//byte[] b=out.toByteArray();
+		//바이트 스트림을 바이트 배열로 바꿔서 out(바이트 배열)
+		
+		System.out.println(Arrays.toString(in));
+		System.out.println(Arrays.toString(out));
+		//toString(): 객체를 문자열로 변환해주는 메소드!!!!!!!!!(강조★)
+	}
+}
