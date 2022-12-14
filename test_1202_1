@@ -1,0 +1,139 @@
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+class Rectangle{
+	int width;
+	int height;
+	
+	int area() {
+		return width*height;
+	}
+}
+class Song{
+	private String title;
+	Song(String title){	
+		this.title=title;
+	}
+	String getsong(){
+		return title;
+	}
+	
+}
+/*
+class A extends Song{
+
+	A(String title) {
+		super(title);
+		// TODO Auto-generated constructor stub
+	}
+	
+}
+*/
+public class test_1202_1 {
+	public static void main(String[] args) throws IOException {
+	/*
+		//1.	 while문을 이용해 실수를 여러 개 입력받고 평균 출력.
+		//(-1이 입력되면 입력을 종료시켜라.)
+		Scanner s=new Scanner(System.in);
+		double sum=0, n=0; 
+		int cnt=0;
+		System.out.print("입력 : ");
+		while((n=s.nextDouble())!=-1) {
+				sum+=n;
+				cnt++;
+			}
+		System.out.println(sum/cnt);
+	
+	
+		
+		//2.  Hi 
+		//저는 자바를 좋아하고 잘합니다.
+		//앞으로 더 열심히 공부할 것입니다.
+		//이 문자열을 test01.txt 파일에 저장해라.
+		FileWriter f= new FileWriter("test01.txt");
+		BufferedWriter bf=new BufferedWriter(f);
+		bf.write("  Hi ");
+		bf.newLine();
+		bf.write("저는 자바를 좋아하고 잘합니다.");
+		bf.newLine();
+		bf.write("앞으로 더 열심히 공부할 것입니다.");
+		bf.newLine();
+		
+		bf.close();
+		f.close();
+		//3. Scanner로 입력 받은 이름(문자열), id(문자열)를 한 줄마다 파일(test02.txt)에 저장해라.
+		//“그만” 입력하면 종료시켜라. “그만” 입력하기 전까지의 문자열을 파일에 저장해라.(break, FileWriter 사용)
+		//실행 결과) 홍길동 hong    
+		//           이길동 lee
+		//           그만
+		Scanner s=new Scanner(System.in);
+		FileWriter fw=null;
+		int r;
+		String name="",id="";
+		
+		try {
+			fw=new FileWriter("test02.txt");
+			while(true) {
+				System.out.println("이릅, id 입력: ");
+				name=s.next();
+				if(name.equals("그만")) {
+					break;
+				}
+				id=s.next();
+				fw.write(name+" "+id);
+			}
+			fw.close();
+		}catch(Exception e) {}
+
+	
+		//3. 1에서 파일에 저장한 데이터들을 화면에 출력해라.
+		//(FileReader사용, int값으로 초기화해라)
+		FileReader fr=null;
+		
+		try {
+			fr=new FileReader("test02.txt");
+			int r;
+			while((r=fr.read())!=-1) {
+				System.out.print((char)r);
+			}
+		}
+		catch(Exception e) {}
+		fr.close();	
+			
+		//4. 다음 main()를 보고 클래스 작성해라.
+		//   main(){
+		//     Rectangle rec = new Rectangle();
+		//     rec.width=5;
+		//     rec.height=6;
+		//     System.out.println(“사각형 면적” + rec.area( ));
+
+		Rectangle rec=new Rectangle();
+		rec.width=5;
+		rec.height=6;
+		//여기서 따로 생성자를 만들 필요는 없다
+		//필드에서 초기화를 해주고 있기 때문이다.
+		System.out.println("사각형 면적 "+rec.area());
+	
+	
+		// 5. main()를 보고 Song클래스를 작성해라.
+		//main(){
+		//Song s1 = new Song(“On”);
+		//Song s2 = new Song(“00:00”);
+		//System.outprintln(“좋아하는 노래” + s1.getsong());
+		//System.outprintln(“내 노래” + s2.getsong());
+		//실행 결과) 좋아하는 노래 On
+		//          내 노래 00:00
+		
+		Song s1=new Song("On");
+		Song s2=new Song("00:00");
+		//s1.title="DNA";	//error난다.
+		//A a= new A();
+		//a.title="aa";	//error난다
+		
+		System.out.println("좋아하는 노래 "+s1.getsong());
+		System.out.println("내 노래 "+s2.getsong());
+*/	
+	}
+}
