@@ -1,0 +1,27 @@
+
+public class literal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//프로그램에서 직접 표현한 값
+		
+		//정수타입 리터럴
+		//8진수, 16진수, 10진수, 2진수
+		//모든 정수 리터럴은 int형으로 컴파일
+		//실수타입 리터럴
+		//소수점을 찍은 실수, 지수식으로 표현한 실수
+		//숫자 뒤에 f나 d를 명시적으로 붙이기도 함
+		//실수타입 리터럴은 double 타입으로 컴파일
+		
+		boolean b=10 > 9;	//맞으니까 true가 출력된다!
+		//boolean b=10 < 9;
+		//boolean b = false;
+		//boolean b = true;
+		//입력한 자료형과 밎는 그릇에 담는것과 같다
+		System.out.println(b);
+		
+		//int n=null;  //error!
+		
+	}
+
+}
