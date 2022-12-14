@@ -1,0 +1,18 @@
+/*
+class A{
+	A(int n){
+		System.out.println("A2");
+	}
+}
+class B extends A{
+	B(){
+		System.out.println("B");
+	}
+}
+public class Ex_Inheritance6_3 {
+	public static void main(String[] args) {
+		B b=new B();	//error -> A(){}기본생성자가 없어서
+				
+	}
+}
+*/
