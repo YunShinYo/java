@@ -1,0 +1,60 @@
+
+public class datatype {
+
+	public static void main(String[] args) {
+		
+		int radius=10;
+		char c1='a', c2='b', c3='c';
+		//char는 하나의 문자만 인식한다
+		String a="h1";	//문자열 인식
+		
+		double weight=75.56;
+		
+		System.out.println(radius);
+		System.out.println(c1+" "+c2+" "+c3);	//+ : 나열
+		System.out.println(a + " " +weight);
+		System.out.println(weight);
+		
+		String str=null;	
+		System.out.println(str);	//출력은 null
+		
+		/*
+		 *  = : 대입연산자
+		 *  	(오른쪽의 값을 왼쪽에 대입한다)
+		 *  == : 같다
+		 *  ----------------------------
+		 *  char로 설정할때는 '', String으로 설정할때는 ""
+		 *  char는 하나의 문자만 인식한다
+		 *  char는 기본타입이고 String은 레퍼런스 타입이다.
+		 *  
+		 *  자바에서 문자열은 객체이므로 기본타입 아님->String
+		 *  문자열 리터럴은 String 객체로 자동 처리->레퍼런스 타입(클래스)★
+		 */
+		
+		
+		
+		
+		//------------------------------
+		/*
+		int radius;		//4byte
+		char c1,c2,c3;	//6byte
+		double weight;	//8byte
+		
+		 * 기본타입(8개)
+		 * 논리타입 : boolean : t/f(1/0) - 1byte
+		 * 문자타입 : char : 하나의 문자	  - 2btye
+		 * 정수타입 : byte, short, int, long : 정수 - 1,2,4,6byte
+		 * 실수타입 : float, double : 실수	- 4, 8byte
+		 * 
+		 * 
+		 * 
+		 *  레퍼런스 타입(1개) - 용도는 3가지 
+		 *  (C/C++의 포인터와 유사한 개념, 그러나 메모리 주소값을 가지지 않음)
+		 *  1. 클래스에 대한 레퍼런스
+		 *  2. 인터페이스에 대한 레퍼런스
+		 *  3. 배열에 대한 레퍼런스
+		 */
+		
+	}
+
+}
