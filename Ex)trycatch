@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Ex_trycatch {
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		while(true) {
+			try {
+				int n=s.nextInt();
+				System.out.println("n: "+n);//catch문을 공백으로 준다.=>실수를 입력했을 때 계속 돌아가지만 아무말도 안뜨게 할때 쓴다
+				//break;
+			}
+			catch(Exception e) {
+				//공백 =>실수를 입력했을 때 계속 돌아가지만 아무말도 안뜨게 할때 쓴다
+				//System.out.println("end");
+				//break;
+			}
+		}
+		//계속 입력할 수 있다
+		//3.5
+		//3.5
+		//3
+		//3
+		//...
+	}
+}
