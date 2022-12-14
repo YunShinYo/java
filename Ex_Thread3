@@ -1,0 +1,68 @@
+/*
+class Music extends Thread {
+	String a;
+
+	public Music(String a) {
+		this.a = a;
+	}
+
+	public void run() {
+		for (int i = 0; i < 10; i++) {
+			System.out.println(a);
+		}
+	}
+}
+
+class Movie implements Runnable {
+	String a;
+
+	public Movie(String a) {
+		for (int i = 0; i < 10; i++) {
+			System.out.println(a);
+		}
+	}
+
+	@Override
+	public void run() {
+		System.out.println(a);
+	}
+}
+
+public class Ex_Thread3 {
+	public static void main(String[] args) {
+		Music m=new Music("음악 재생");
+		m.start();
+		
+		Movie m1=new Movie("영화 재생");
+
+		//m1.start();	//(바로접근x)
+		Thread t=new Thread(m1);	//Thread객체 안에 m1이 와줘야 start()를 할 수 있다
+		t.start();
+		
+		try {
+			//멀티스레드일 경우에는 스레드들이 끊어질 수 있다!
+			//일기(프로세스)와 뮤직(스레드)가 동시에 실행되는 중에 수정(프로세스)가 접근했다.
+			//방해받지 않으려면 일기(프로세스)에 lock을 걸면 된다. 
+			//이때, 프로세스가 다 실행한 이후에 누군가가 끼어들어야 되는데 
+			//그렇지 않으면 뮤직스레드까지 끊겨버린다.
+			//이 문제를 해결하기 위한 3가지 방법이 있다
+			//1. join() - 스레드가 죽을 때까지 기다렸다가 다음으로 넘어가는 함수
+			//2. notify()/wait() - 
+			//3. synchronized - 공통적으로 쓰는 필드 또는 함수에 접근할 때 쓴다.
+			
+			//setPriority() - 스레드 객체의 변수값을 이용해서 쓰레드의 우선순위를 줄 수있는 함수 
+			
+			m.join();	//음악 재생이 기다린다. 영화재생이 다 끝날때까지.
+			t.join();	//영화 재생이 기다린다. 음악재생이 다 끝날때까지.
+			//=>스레드가 종료될때까지 기다린다.
+			//예) 계산할 때 사용된다. 은행이 계산을 다 할 때까지 다른 은행이 끼어들수 없다.
+			
+			//throws InterruptedException : 끼어들수 없다.
+			
+			//=>스레드는 JNI할 때 자세히 씀
+		}	
+		catch(Exception e) {}
+		
+	}
+}
+*/
