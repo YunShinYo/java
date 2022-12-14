@@ -1,0 +1,34 @@
+class Animal {
+	String str;
+
+	Animal(String str) {
+		this.str = str;
+	}
+
+	String ani() {
+		return str;
+	}
+}
+class Dog extends Animal{
+	String dog;
+	Dog(String dog1, String dog2){
+		super(dog1);
+		this.dog=dog2;
+	}
+	
+	public String ani() {
+		
+		return super.ani()+dog;
+	}
+
+}
+
+public class review_1207_2 {
+	public static void main(String[] args) {
+		//Animal 부모에는 강아지라는 문자열만 있음
+		//Dog 자식
+		
+		Animal a1 = new Dog("강아지", "푸들");	//upcasting..
+		System.out.println(a1.ani());	//출력->강아지푸들
+	}
+}
