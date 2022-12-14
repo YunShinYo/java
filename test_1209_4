@@ -1,0 +1,62 @@
+
+interface Person {
+	String work(); // 추상메소드
+}
+
+class Student implements Person {
+	@Override
+	public String work() {
+		return "일한다";
+	}
+}
+
+class Worker implements Person {
+	@Override
+	public String work() { // 오버라이드(재정의)
+		return "공부한다";
+	}
+}
+abstract class Ab {
+	abstract int total(int[] a);// abstract메소드일때는 적어줘야 한다.
+}
+
+class Cd extends Ab{
+	@Override
+	int total(int[] arr) {
+		int sum=0;
+		for(int i=0; i<arr.length; i++) {
+			sum+=arr[i];
+		}
+		return sum;
+	} 
+}
+
+public class test_1209_4 {
+	static void pr(Person p) { // upcasting
+		System.out.println(p.work());
+	}
+
+	public static void main(String[] args) {
+		// 5. 다음은 Person인터페이스이다. Worker, Student클래스 작성해라.
+		// interface Person{
+		// String work(); }
+		// public class 클래스명{
+		// static void pr(Person p){
+		// System.out.println(p.work()); }
+		// main(){
+		// pr(new Worker()); // 일한다
+		// pr(new Student()); //공부한다 출력
+
+		pr(new Worker());
+		pr(new Student());
+
+		// 6. 다음 main()를 보고 추상 클래스와추상메소드 작성해라.
+		// (total 함수는 배열 값(1,2,3,4,5) 총합 리턴받는 함수)
+		// main(){
+		// Ab c=new Cd();
+		// System.out.println(c.total(new int []{1,2,3,4,5}));
+
+		Ab c = new Cd(); // 부모=자식
+		System.out.println(c.total(new int[] {1, 2, 3, 4, 5}));
+	}
+}
