@@ -1,0 +1,43 @@
+//면접에서 자주 나온다★
+class AAA{
+	void ride() {
+		System.out.println("오버라이딩 AAA");
+	}
+	void load() {
+		System.out.println("오버로딩 AAA");
+	}
+}
+class BBB extends AAA{
+	//super.ride(); //안쓴다
+	
+	void ride() {	//오버라이딩(재정의) :자식쪽에서 재정의 해주면 부모에 있는 게 무시돼버린다.(기각, 무시하다)
+					//ex) 상속관계에서 많이 나옴
+		System.out.println("오버라이딩 BBB");	
+	}
+	void load(int n) {	//오버로딩 : 매개변수를 확인해주어야 한다.같은 이름의 함수가 여러개 있다. 
+						//ex) 생성자 오버로딩 , 메소드 오버로딩..
+		System.out.println("오버로딩 BBB");
+	}
+}
+public class Ex_Override_overload1 {
+
+	public static void main(String[] args) {
+		//오버라이딩과				오버로딩
+		//(override-기각, 무시하다)	(overload-과적하다, 과부하)
+		
+		AAA a=new AAA();
+		a.ride();
+		a.load();
+		
+		BBB b=new BBB();
+		b.ride();	//그냥도 오버라이딩 AAA가 출력된다.
+		//오버라이딩(재정의) 해주면 오버라이딩 BBB가 출력된다.
+		b.load(10);	
+		
+		//->출력
+		//오버라이딩 AAA
+		//오버로딩 AAA
+		//오버라이딩 BBB
+		//오버로딩 BBB
+	}
+}
