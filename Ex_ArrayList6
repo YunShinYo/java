@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+/*
+class XY{
+	int a, b;
+	
+	XY(int a, int b){
+		this.a=a;
+		this.b=b;
+	}
+	public String toString() {
+		return a+" "+b;
+	}
+}
+public class Ex_Arraylist6 {
+	public static void main(String[] args) {
+		ArrayList<XY> v=new ArrayList<XY>();
+		//3rodml XY객체 삽입
+		v.add(new XY(2,3));//언박싱
+		v.add(new XY(4,3));
+		v.add(new XY(8,3));
+		//v.add(4);	//오토박싱이 가능해서 가능		
+		
+		v.remove(0);	//v.add(new XY(2,3));삭제
+		
+		for(int i=0; i<v.size(); i++) {
+			XY p=v.get(i);
+			System.out.println(p);	//해시코드 출력됨
+		}	//참조변수 출력하면 자동으로 toString()함수 호출 => 해시코드
+	}		//toString을 오버라이딩 해야함
+}
+*/
