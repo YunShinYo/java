@@ -1,0 +1,25 @@
+import java.util.StringTokenizer;
+
+public class Ex_StringTokenizer {
+	public static void main(String[] args) {
+		String str = "id=123#name=gildong#addr=seoul";
+
+		// #을 기준으로 문자열 나누기 -> split()과 비슷하다
+		StringTokenizer s = new StringTokenizer(str, "#");
+
+		int n = s.countTokens();
+		System.out.println(n);
+
+		while (s.hasMoreTokens()) {
+			String a = s.nextToken();
+			System.out.println(a);
+			
+			//출력->
+			//3
+			//id=123
+			//name=gildong
+			//addr=seoul
+
+		}
+	}
+}
