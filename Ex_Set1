@@ -1,0 +1,48 @@
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+/*
+class Stu {
+	int a;
+	String b;
+
+	Stu(int a, String b) {
+		this.a = a;
+		this.b = b;
+	}
+
+	public String toString() {
+		return a + " " + b;
+	}
+
+	// 중복 제거를 위한 오버라이딩(중복된거 아무거나 지워짐..)
+	public int hashCode() {
+		return a;
+	}
+
+	public boolean equals(Object obj) {
+		Stu s = (Stu) obj;
+		if (s.a == this.a) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
+
+public class Ex_Set1 {
+
+	public static void main(String[] args) {
+		Set<Stu> s = new HashSet<Stu>();
+		s.add(new Stu(11, "user1"));
+		s.add(new Stu(12, "user2"));
+		s.add(new Stu(11, "user3"));
+
+		// Stu 클래스 만들고, 모든 데이터 다 출력(iterator 사용)
+		Iterator it = s.iterator();
+		while (it.hasNext()) {
+			System.out.println(it.next());
+		}
+	}
+}
+*/
