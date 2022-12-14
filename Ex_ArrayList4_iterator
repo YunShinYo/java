@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+public class Ex_Arraylist4_iterator {
+
+	public static void main(String[] args) {
+		ArrayList<Integer> list=new ArrayList<>();
+		list.add(53);
+		list.add(2147483647);
+		list.add(-2147483648);
+		
+		//ArrayList객체 만들고 정수만 들어올 수 있게 정수 3개삽입하고
+		// 정수 3개 다 출력
+		
+		//for(int i=0; i<list.size(); i++) {
+		//	System.out.println(list.get(i));
+		//}
+		Iterator<Integer> it=list.iterator();
+		
+		while(it.hasNext()) {
+			int n=it.next();	//다음 데이터를 N에 저장
+			System.out.println(n);
+		}
+		
+	}
+}
+
+//출력값->
+//53
+//2147483647
+//-2147483648
+
