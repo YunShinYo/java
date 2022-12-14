@@ -1,0 +1,21 @@
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class Ex_HashSet2 {
+
+	public static void main(String[] args) {
+		//HashSet //중복허용 안됨(hashCode, equals)
+		//TreeSet //정렬(compareTo)
+		
+		HashSet<Integer> h=new HashSet<Integer>();
+		h.add(new Integer(14));
+		h.add(14);
+		h.add(24);
+		
+		Iterator<Integer> it=h.iterator();
+		while(it.hasNext()) {
+			int a=it.next();
+			System.out.println(a);
+		}
+	}
+}
