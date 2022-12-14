@@ -1,0 +1,66 @@
+interface Phone{
+	int BUTTONS=20;
+	void send();
+	void receive();
+}		
+interface Mobile extends Phone{
+	void sendKaokao();		//추가된 메소드들
+	void receiveKakao();	
+}
+interface MP3{
+	void play();
+	void stop();
+	
+}
+class PDA{
+	public int cal(int x, int y) {
+		//System.out.println(x+y);
+		return x+y;
+	}
+}
+//Smart클래스는 PDA클래스 상속받고 Mobile, MP3 인터페이스 구현
+class Smart extends PDA implements Mobile, MP3{
+	//추가된 메소드들
+	@Override
+	public void send() {//interface Phone
+		 System.out.println("전화건다");
+	}
+
+	@Override
+	public void receive() {//interface Phone
+		 System.out.println("전화받는다");
+	}
+
+	@Override
+	public void play() {//interface MP3
+		System.out.println("노래듣는다");
+	}
+
+	@Override
+	public void stop() {//interface MP3
+		System.out.println("노래끈다");
+	}
+
+	@Override
+	public void sendKaokao() {//interface Mobile extends Phone
+		System.out.println("카톡 보낸다");
+	}
+
+	@Override
+	public void receiveKakao() {//interface Mobile extends Phone
+		System.out.println("카톡 받는다");
+	}
+
+	
+	
+}
+
+public class Ex_Interface6_1 {
+	public static void main(String[] args) {
+		Smart s=new Smart();
+		s.send();
+		s.play();
+		s.cal(3, 5);
+	}
+
+}
