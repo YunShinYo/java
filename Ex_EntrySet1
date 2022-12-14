@@ -1,0 +1,30 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+public class Ex_Map1 {
+
+	public static void main(String[] args) {
+		Map<Integer, Double> m = new HashMap<Integer, Double>();
+		
+		m.put(2, 3.5);
+		m.put(3, 5.5);
+		m.put(4, 6.5);
+		
+		Set<Map.Entry<Integer,Double>> s= m.entrySet();
+		for(Map.Entry<Integer,Double> m1:s) {
+			System.out.println(m1.getValue());
+			System.out.println(m1.getKey());
+		}
+		
+		/*
+		//iterator
+		Set<Integer> key=m.keySet();
+		Iterator it=key.iterator();
+		while(it.hasNext()) {
+			int i=(int) it.next();
+			System.out.println(i+","+m.get(i));
+		}
+		*/
+	}
+}
