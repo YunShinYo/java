@@ -1,0 +1,42 @@
+class Person{
+	private String name;
+	
+	Person(String name){
+		this.name=name;
+	}
+	void name() {
+		System.out.println(name);
+	}
+}
+
+class Student extends Person{
+	private String major;
+	private String school;
+	
+	Student(String name, String major, String school){
+		super(name);	//부모 생성자 호출	
+		//this.name=name;와 같은 의미이다.
+		this.major=major;
+		this.school=school;
+	}
+	void show() {
+		name();	//부모에 있는 함수 System.out.println(name);
+		System.out.println(major);
+		System.out.println(school);
+	}
+}
+public class Ex_inheritance2_1_this {
+	public static void main(String[] args) {
+		
+		Person p=new Person("형민");
+		p.name();	//형민 출력
+		
+		Student s=new Student("형민","컴퓨터","컴공");	//객체 생성
+		//클래스 객체 = new연산자 생성자
+		
+		//s.name();//자식은 부모꺼 쓸수는 있다
+		//p.show();//부모는 자식꺼 못쓴다.
+		
+		s.show();	//다 출력->for문을 안돌려도 객체로 다 출력된다.
+	}
+}
