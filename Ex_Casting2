@@ -1,0 +1,29 @@
+/*
+class Fruit{
+	String a;
+	int b;
+	Fruit(String a, int b){
+		this.a=a;
+		this.b=b;
+	}
+	void show() {
+		System.out.println(a+" "+b);
+	}
+}
+class Apple extends Fruit{
+	Apple(String a, int b){
+		super(a, b);
+	}
+}
+public class Ex_Casting_up_down_2 {
+
+	public static void main(String[] args) {
+		Fruit f1=new Apple("red", 10);	//upcasting이다.
+		f1.show();  //부모의 메소드가 출력된다.->red 10
+		
+		Apple a=(Apple)f1;	//downcasting이다.
+		a.show();	//부모의 메소드가 출력된다.->red 10
+	}
+
+}
+*/
