@@ -1,0 +1,127 @@
+/*
+
+import java.util.Scanner;
+
+class PhoneNum {
+	String name;
+	String phone;
+
+	PhoneNum(String n, String p) {
+		name = n;
+		phone = p;
+	}
+
+	void show() {
+		System.out.println("이름 : " + name);
+		System.out.println("번호 : " + phone);
+	}
+}
+
+class School extends PhoneNum { // 학교친구
+	String major;
+
+	School(String n, String p, String major) {
+		super(n, p);
+		this.major = major;
+	}
+
+	void show() { // 오버라이딩
+		super.show();
+		System.out.println("전공 : " + major);
+	}
+}
+
+class Worker extends PhoneNum {
+	String grade;
+
+	Worker(String n, String p, String g) {
+		super(n, p);
+		this.grade = g;
+	}
+
+	void show() {
+		// 이름, 번호, 직급 출력
+		super.show();
+		System.out.println("직급 : " + grade);
+	}
+}
+
+class Arr {
+	PhoneNum[] ary; // 객체배열 선언
+	int n; // 변수 선언
+
+	Arr(int n) {
+		ary = new PhoneNum[n]; // 배열 생성코드
+		n = 0;
+	}
+
+	void add(PhoneNum p) {
+		ary[n++] = p; // 친구 추가
+	}
+
+	void friend(char ch) {
+		Scanner s=new Scanner(System.in);
+		System.out.println("이름: ");
+		String name=s.next();
+		System.out.println("번호: ");
+		String num=s.next();
+		
+		switch(ch) {
+		case 'A':
+			System.out.println("전공: ");
+			String major=s.next();
+			//PhoneNum p=new School(name, num, major);
+			add(new School(name, num, major));
+			break;
+		case 'B':
+			System.out.println("직급: ");
+			String grade=s.next();
+			add(new Worker(name, num, grade));
+			break;
+			
+		}
+	}
+	void all() {
+		for(int i=0; i<n;i++) {
+			ary[i].show(); //ary는 phoneNum객체배열이었다(School객체나 Worker객체 아님)
+			//phoneNum ary[i]=new School[i];이면
+			//School클래스의 show메소드가 출력된다.
+			//어떤 클래스의 show메소드인지는 
+			//Arr클래스의 friend메소드에서 add(new ...)되는 클래스 객체에 따라 달라진다.
+		}
+	}
+}
+
+public class Ex_phoneBook {
+	public static void main(String[] args) {
+		// PhoneNum(부모)
+		// School학교친구(자식)
+		// Worker직장동료(자식)
+		Arr ar=new Arr(5);
+		//객체 배열 5개
+		
+		while(true) {
+			System.out.println("A.학교 친구 정보");
+			System.out.println("B.직장 동료 정보");
+			System.out.println("C.종료");
+			System.out.println("D.출력");
+			System.out.println("문자 입력");
+			
+			Scanner s=new Scanner(System.in);
+			char c=s.next().charAt(0);
+			
+			switch(c) {
+			case 'A','B':
+				ar.friend(c);
+				break;
+			case 'C':
+				System.out.println("종료");
+				return;	//반환한다는 뜻이다=>함수종료(while(true)문을 종료시키고 빠져나가겠다.)
+			case 'D':
+				ar.all();
+				break;
+			}			
+		}
+	}
+}
+*/
