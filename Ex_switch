@@ -1,0 +1,138 @@
+import java.util.Scanner;
+
+public class Ex_switch {
+	public static void main(String[] args) {
+		//조건 분기문
+		//case에 들어 갈 수 있는 값은 상수인데 
+		//상수는 정수, 문자, 문자열로 구성되었다.(실수 리터럴은 허용되지 않음)
+		//break문을 만나면 switch문에서 벗어남 (조건에서 빠져나가는 제어문)
+		//case 1:, 2..
+		//case "예","아니오"..
+		//case 'A','B'.. 는 된다
+		//default문은 생각가능
+		//default 키워드는 else 키워드와 역할은 똑같다
+		
+		/*
+		System.out.println("무슨 요일이죠?");	//수요일
+		String day=s.next();
+		//내가 입력한 요일을 조건으로 인식
+		
+		//case "1" -> String day...
+		//case '1' -> char day...
+		//case 1 -> int day...
+		
+		switch(day) {
+		case "수요일":
+			System.out.println("수");
+			break;
+		case "목요일":
+			System.out.println("목");
+			break;
+		default:	//수요일, 목요일이 아닐 경우
+			System.out.println("수,목 아님");
+			break;
+		}
+		 */
+		/*
+		Scanner s=new Scanner(System.in);
+		System.out.println("글자 입력: ");
+		
+		char ch=s.next().charAt(0);	//next()는 String만 받을 수 있고 char타입은 아님
+									//.charAt(0)을 넣어줘야됨->String 클래스 타입의 함수
+									//.charAt(0)=>한글자 뽑아내라
+		//입력: 김요한 -> index로 받아줌(0,1,2)
+		//입력: 1234 -> index로 받아줌(0,1,2,3)
+		
+		
+		switch(ch) {
+		case 'm':
+		case 'v':	//조건 추가해줌
+			System.out.println("movie");
+			break;
+		case 's':
+			System.out.println("sing");
+			break;
+		case 'b':
+			System.out.println("book");
+			break;
+		default:
+			System.out.println("etc");
+			break;
+		}
+		*/
+		
+		//0.0 <= Math.random()의 범위 < 1.0
+		//.random() 메서의 리턴값은 double이다.
+		//ex)
+		//0.0*10 <= Math.random()*10 < 1.0*10 
+		//->0.0+5 <= Math.random()*10+5 < 10.0+5
+		//->5.0 <= Math.random()*10+5 < 15.0
+		//->5 <= (int)(Math.random()*10+5) < 15
+		//=>5~14까지 수 중에서 랜덤으로 값을 뽑아냄
+		
+		//1~100까지 수 중에서 랜덤으로 값을 뽑아내기 위한 랜덤 함수문 
+		//->1 <= (int)(Math.random()*100)+1 < 101
+		//80~100까지 수 중에서 랜덤으로 값을 뽑아내기 위한 랜덤 함수문
+		//->80 <= (int)(Math.random*21)+80 < 101
+		//0~50까지 수 중에서 랜덤으로 값을 뽑아내기 위한 랜덤 함수문
+		//->0 <= (int)(Math.random*51) < 51
+		/*
+		//4~12까지 수 중에서 랜덤으로 값을 뽑아냄	
+		int n=(int)(Math.random()*9)+4;
+		
+		//switch_case문으로 코드 작성하기
+		//1이 뽑아지면 "one"
+		//5가 뽑아지면 "five"
+		//6이 뽑아지면 "six"
+		switch(n) {
+		case 1:
+			System.out.println("one");
+			break;
+		case 5:
+			System.out.println("five");
+			break;
+		case 6:
+			System.out.println("six");
+			break;
+		}
+		System.out.println(n);
+		
+		*/
+		
+		//1~100까지 수를 랜덤으로 뽑아줌
+		int n=(int)(Math.random()*100)+1;
+		
+		if(n%5==0) //n을 5로 나눴을 때 나머지가 0이면
+			System.out.println("n은 5의 배수");
+		else if(n%10==0)	//100도 10의 배수지만 안넘어감
+			System.out.println("n은 10의 배수");
+		//if(n%10==0)			//100도 출력값이 나옴
+		//	System.out.println("n은 10의 배수");
+		else 				//5의배수도 10의배수도 아닐경우
+			System.out.println("위 조건 다 아님");
+		
+		
+		//81~100점 사이에 랜덤으로 값을 뽑아냄
+		int score=(int)(Math.random()*20)+81;	//끝 값을 101까지 뽑아줘야됨
+		System.out.println(score);
+		
+		String grade; 	//변수 선언(문자열)
+		if(score>=90) {
+			if(score>=95) {
+				grade="A+";
+			}
+			else {	//90점 이상이면서 95점 미만
+				grade="A";
+			}
+		}
+		else{	//90점 미만
+			if(score>=85) {
+				grade="B+";
+			}
+			else {	//90점 미만이면서 85점 미만
+				grade="B";
+			}
+		}
+		System.out.println("학점: "+grade);
+	}
+}
