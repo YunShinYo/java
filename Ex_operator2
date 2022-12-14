@@ -1,0 +1,193 @@
+public class Ex_operator2 {
+	public static void main(String[] args) {
+		/*
+		 * // 비교연산자 
+		 * // a<b,a>b,a<=b,a>=b,a==b,a!=b(! : not) 
+		 * // 논리연산자 
+		 * // 대입연산자 
+		 * // 증감연산자
+		 * // 조건연산자?: int x = 5, y = 3; 
+		 * int s = (x > y) ? 1 : -1;
+		 * boolean bb = (s == 1)? true : false; 
+		 * System.out.println(bb);
+		 
+		 * //------------------------------------- 
+		 * //비교연산자 
+		 * System.out.println(3 >= 2);  // 출력값은 true 
+		 * 								// >= : 비교연산자이므로 결과값이 true/false가 나온다 
+		 * System.out.println('a' > 'b'); // false 
+										// 아스키코드값 : a=65, b=66.., A=41) 
+		 * System.out.println(3 == 2); //false 
+		 * System.out.println(3 != 2); // true
+		 * 
+		 * System.out.println(!(3 != 2)); // false 
+		 * System.out.println((3 > 2) && (3 > 4)); // true && false -> 출력:false 
+		 * // && : 두 조건 둘다 true여야 true출력 그외 다 false 
+		 * // || : 두 조건 중 하나만 true여도 true 출력
+		 * 
+		 * System.out.println(((3 != 2) || (-2 > 0))); // true||false -> 출력 : true
+		 */
+
+		/*
+		 * //-------------------------------------
+		 * 
+		 * //대입연산자 int aa=3; //변수 선언과 동시에 변수 초기화(4byte 메모리공간 확보) 
+		 * int b2; //변수 선언(4byte 메모리공간 확보)
+		 * 
+		 * b2=aa; //a1값 3을 b2에 대입 
+		 * System.out.println(b2); //3
+		 * 
+		 * b2=b2+aa; //3+3 
+		 * System.out.println(b2); //6 
+		 * b2+=aa; 
+			 * System.out.println(b2); //9 
+			 * //질문
+			 * //String str="문자"; 
+			 * //System.out.println(b2+"aa"+str); //+ : 나열
+		 */
+
+		/*
+		 * //------------------------------------- 
+		 * //증감연산자 
+		 * //int a=0; 
+		 * //a+=3; //a=a+3
+		 * //System.out.println(a); //3 
+		 * //System.out.println(a++); //출력 후 증가 ->출력 : 3
+		 * 
+		 * //a++ : 후위연산자 (나중) 
+		 * //++a : 전위연산자 (먼저)
+		 * 
+		 * //int a=3; 
+		 * //a++; 
+		 * //System.out.println(a); //4 
+		 * //int b=3; 
+		 * //++b;
+		 * //System.out.println(b); //4
+		 * 
+		 * //int a=3; 
+		 * //a--; 
+		 * //System.out.println(a); //2
+		 * 
+		 * //int b=3; 
+		 * //--b; 
+		 * //System.out.println(b); //2
+		 * 
+		 * //전위, 후위증감 연산자를 단독으로 쓰는 경우는 1증가 감소란 뜻 
+		 * //단독으로 쓸 경우가 아닐때는 순서를 생각해서 코드짜야한다!
+		 * 
+		 * //int a,b=4; //a는 변수선언만하고 b는 선언과 초기화를 동시에 하겠다 -> 현재 a에 값은 없다 
+		 * //a=b++; //1증가가 먼저냐 / 대입이 먼저냐 // 
+		 * //후위연산자이기 때문에 대입을 먼저 한 후 나중에 증가시키겠다.
+		 * //System.out.println(a); //4 
+		 * //System.out.println(b); //5
+		 * 
+		 * //a=++b; //1증가가 먼저냐 / 대입이 먼저냐 // 
+		 * //전위연산자이기 때문에 1증가 먼저 한 후 나중에 대입시키겠다
+		 * //System.out.println(a); //5 
+		 * //System.out.println(b); //5
+		 * 
+		 * int a=0; 
+		 * a+=3; //a=a+3; 
+		 * System.out.println(a++); //3 -> 출력 / 1증가
+		 * System.out.println(a); //4
+		 * 
+		 * System.out.println(++a); //5 
+		 * System.out.println(a); //5
+		 * 
+		 * System.out.println(a--); //5 -> 출력한 이후에 1감소 
+		 * System.out.println(a); //4
+		 * 
+		 * System.out.println(--a); //3 -> 1감소 후에 출력 
+		 * System.out.println(a); //3
+		 * 
+		 * 
+		 * //실습 예제 
+		 * int a=5; 
+		 * int b;
+		 * 
+		 * b=a++; 
+		 * //System.out.println(a); //6 
+		 * System.out.println(b); //5
+		 * 
+		 * b=++a; 
+		 * System.out.println(a); //7 
+		 * System.out.println(b); //7
+		 */
+
+		/*
+		 * // ------------------------------------- 
+		 * int age = 30; // 정수 
+		 * double ki = 77.7; // 실수 
+		 * String name = "jack"; // 문자열 
+		 * char grade = 'A'; // 하나의 문자열
+		 * 
+		 * // 다음 중 기본타입이 아닌 것은? name
+		 * 
+		 * // System.out.println(age+ki+name+grade); //207.7jackA 
+		 * // age+ki는 숫자끼리 합이 나온다
+		 * // 원래는 나열연산자인데 숫자가 있으면 더해진다 
+		 * // System.out.println(age+" "+ki+name+grade); //30 177.7jackA 
+		 * // 합이 싫으면 숫자 사이에 공백을 넣어준다
+		 * 
+		 * // System.out.println(); 
+		 * // System.out.print();
+		 * 
+		 * //printf로 출력할 때 쓰이는 서식문자들 
+		 * // System.out.printf(); 
+		 * // 정수 %d 
+		 * // 실수 %f, %lf // 소수점 6자리가 기준 
+		 * // 문자열 %s 
+		 * // 문자 %c
+		 * 
+		 * System.out.printf("%d %f %s %c", age, ki, name, grade); //30 177.700000 jack A
+		 * System.out.printf("%d %.1f %s %c", age, ki, name, grade); //30 177.7 jack A
+		 * System.out.printf("%d %.2f %s %c", age, ki, name, grade); //30 177.70 jack A
+
+		String name = "건용";
+		int age = 20;
+		double ki = 177.7;
+		char blood = 'O';
+
+		// printf을 이용해서 출력 -> 건용의 나이는 20살이다.
+		// println을 이용해서 출력 -> 건용의 혈액형은 O형
+		System.out.printf("%s의 나이는 %d살이다", name, age);
+		System.out.printf("%s의 혈액형은 %c형", name, blood);
+		System.out.println(name + "의 나이는 " + age + "살이다.");	//그냥 나열함
+		System.out.println(name + "의 혈액형은 " + blood + "형");
+		
+		//강제타입변환 예제 복습
+		System.out.println((int)(6+2.5));	//8
+		System.out.println((int)(8.5+0.5));	//9
+		
+		//실습 예제1
+		//영어 100, 국어 95점으로 초기화
+		int eng=100, kor=95;
+		//영어, 국어의 두 과목의 평균 구하기
+		double avg=(eng+kor)/2;
+		System.out.println(avg);	//97.0 -> double을 줬기 때문에 정확한 계산이 되지 않는다
+		avg = (eng+kor)/2.0;
+		System.out.println(avg);	//97.5 -> 강제 타입 변환 : 두 값 중 하나의 값을 소수점으로 바꿔준다
+		avg = (double)(eng+kor)/2;	//       실수 타입이 정수타입으로 바뀌면 소수점이하 값이 버려짐
+		System.out.println(avg); 	//97.5
+		
+		System.out.printf("두 과목 평균은 %.1f점이다\n", avg);
+		System.out.println("두 과목 평균은 " +avg+ "점이다");
+		
+		//실습 예제2
+		int n=10;
+		System.out.println(n++);	//10
+		System.out.println(n);		//11
+		System.out.println(++n); 	//12
+		System.out.println(--n); 	//11
+		*/
+		
+
+		// -------------------------------------
+		// 조건연산자
+		int a=3, b=5;
+		System.out.println((a>b)? (a+b):(a-b));
+		
+		//조건 ? 참 : 거짓
+		
+	}
+}
