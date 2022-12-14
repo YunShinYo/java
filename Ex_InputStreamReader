@@ -1,0 +1,53 @@
+import java.io.BufferedReader;
+import java.io.FileWriter;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+
+public class Ex_Inputstreamreader {
+	public static void main(String[] args) {
+		//InputStreamReader는 콘솔에 데이터를 입력해서 입력한 데이터를 파일에 저장한다.
+		//FileReader는 데이터를 파일에 내보내고 내보낸 데이터를 읽어올때 쓴다.
+		
+		//InputStreamReader : 보조스트림이고(입력), 바이트단위로 읽은 자료를 문자로 변환해준다
+		//Scanner calss와 같은 기능이지만 더 효율이 좋고 빠르다
+		//PrintWriter : 보조스트림이다(출력).
+		//==>기반 스트림이 필요하겠군..
+		
+		//-어제 한거(Ex_fileIO2.java)-
+		//1.파일생성(BufferedWriter(new FileWriter("b.txt"))해서 데이터를 넣고
+		//2. 데이터 넣은거 읽어온다(BufferedReader(new FileReader("a.txt"))
+		//-지금 하는거(Ex_Inputstreamreader.java)-
+		//1.콘솔에 데이터를 입력(BufferedWriter(new InputStreamReader(System.in))해서
+		//2. 입력한 데이터를 파일에 저장(PrintWriter(new FileWriter("d.txt"))한다.
+		
+//------------------------------------------		
+		
+		//콘솔창에 문자를 입력해서 입력한 문자를
+		//파일에 저장(InputStreamReader)
+		//=>run하고 콘솔창에 입력한 후에 ctrl+z를 눌러서 파일의 끝임을 알려준다
+		
+		BufferedReader bu=null;		//입력하기 위한 문자형 입력 스트림
+		PrintWriter pr=null;		//출력하기 위한 문자형 출력 스트림
+		
+		try {
+			InputStreamReader in=new InputStreamReader(System.in);
+			bu=new BufferedReader(in);
+			//콘솔에 입력!
+			//BufferedReader bu = new BufferedReader(new InputStreamReader(System.in));
+			
+			FileWriter fw=new FileWriter("d.txt");
+			//d.txt에 저장
+			pr=new PrintWriter(fw);
+			
+			String str=null;
+			while((str=bu.readLine())!=null) {	//readLine() : 한줄한줄 읽어옴, read() : 한글자 읽어옴
+				pr.println(str);
+			}
+			bu.close();	//파일 저장(출력)
+		}
+		catch (Exception e) {}
+		finally {
+			pr.close();
+		}
+	}
+}
