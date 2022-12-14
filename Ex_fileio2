@@ -1,0 +1,58 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Ex_fileIO2 {
+
+	public static void main(String[] args) {
+		// BufferedReader 안에 매개변수를 기반스트림으로 받아야한다.
+
+		/*
+		 * //파일 내보내기 
+		 * try { 
+		 * FileWriter fw = new FileWriter("b.txt");
+		 * BufferedWriter out = new BufferedWriter(fw); 
+		 * // 혼자 파일생성이 불가능하므로 기반 스트림을 매개변수로 둬야함
+		 * 
+		 * out.write("안녕!"); 
+		 * out.newLine(); // 줄바꿈 
+		 * out.write("오늘은 수요일!"); 
+		 * out.newLine();
+		 * out.write("aaa@naver.com"); 
+		 * out.close(); 
+		 * } 
+		 * catch (IOException e) {
+		 * e.printStackTrace(); 
+		 * }
+		 */
+		
+		// 파일 읽어오기
+		// FileReader f=new FileReader("b.txt");
+		// BufferedReader in=new BufferedReader(f);
+		try {
+			BufferedReader in = new BufferedReader(new FileReader("b.txt"));
+			String str;
+			while (true) { // 무한루프
+				try {
+					str = in.readLine();
+					if (str == null) {
+						break;
+					}
+					System.out.println(str);
+				}
+				catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			try {
+				in.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+}
