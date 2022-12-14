@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+class Profile {
+	String name, id;
+
+	Profile(String n, String i) {
+		name = n;
+		id = i;
+	}
+}
+
+public class test_1206_5 {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+
+		// 객체배열 2개[2]만들어 이름과 아이디를 입력받아
+		// 객체 생성해서 입력한 값을 출력해라.
+		
+		System.out.println("이름,id 입력 :");
+		
+		Profile[] p1 = new Profile[2];
+		
+		for (int i = 0; i < p1.length; i++) {
+			String name = s.next();
+			String id = s.next();
+			p1[i] = new Profile(name, id);
+		}
+		for(Profile p:p1) {
+			System.out.println(p.name+" "+p.id);
+		}
+		
+		//user1 123 
+		//user2 234
+	}
+}
