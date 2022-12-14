@@ -1,0 +1,235 @@
+12월15일23:59까지 제출(이름 : 윤신요)
+import java.lang.reflect.Member;
+
+//12월15일 23:59까지 sjwsrh@naver.com 으로 보내야함
+//p.392~394
+//-Powder 클래스 정의하기
+public class Powder{
+public void doPrinting() {
+System.out.println("Poder 재료로 출력합니다.");
+}
+public String toString() {
+return "재료는 Powder입니다";
+}
+}
+}
+//-Plastic 클래스 정의하기
+public class Plastic{
+public void doPrinting() {
+System.out.println("Plastic 재료로 출력합니다");
+}
+public String toString() {
+return "재료는 Plastic입니다";
+}
+
+//GenericPrinter<T> 클래스 정의하기
+public class GenericPrinter<T>{
+private T material;
+
+public void setMaterial(T material) {
+this.material=material;
+}
+public T getMaterial() {
+return material;
+}
+public String toString() {
+return material.toString();
+}
+}
+
+//GenericPrinter<T> 클래스 사용하기
+public class GenericPrinterTest{
+public static void main(String[] args) {
+GenericPrinter<Powder> powderPrinter=new GenericPrinter<Powder>();
+
+powderPrinter.setMaterial(new Powder());
+Powder powder=powderPrinter.getMaterial();
+System.out.println(powderPrinter);
+
+GenericPrinter<Plastic> plasticPrinter = new GenericPrinter<Plastic>();
+
+plasticPrinter.setMaterial(new Plastic());
+Plastic plastic=plasticPrinter.getMaterial();
+System.out.println(plasticPrinter);
+}
+}
+//p.400~401
+//자료형 매개변수를 두 개 사용하는 클래스
+public class Point<T,V>{
+T x;
+V y;
+
+Point(T x, V y){
+this.x=x;
+this.y=y;
+}
+public T getX() {
+return x;
+}
+public V getY() {
+return y;
+}
+}
+
+//-제네릭 메서드 구현하기
+public class GenericMethod{
+public static <T,V> double makeRectangle(Point<T,V> p1, Point<T,V>p2) {
+double left=((Number)p1.getX()).doubleValue();
+double right=((Number)p1.getX()).doubleValue();
+double top=((Number)p1.getY()).doubleValue();
+double bottom=((Number)p1.getY()).doubleValue();
+
+double width=right-left;
+double height=bottom-top;
+
+return width-height;
+}
+public static void main(String[] args) {
+Point<Integer, Double> p1=new Point<Integer, Double>(0, 0.0);
+Point<Integer, Double> p2=new Point<>(10, 10.0);
+double rect=GenericMethod.<Integer, Double>makeRectangle(p1,p2);
+System.out.println("두 점으로 만들어진 사각형의 넓이는 "+rect+"입니다.");
+}
+}
+//p.407,408,410,411,412
+//-Member 클래스 구현하기
+public class Member{
+private int memberId;
+private String memberName;
+
+public Member(int memberId, String memberName) {
+this.memberId=memberId;
+this.memberName=memberName;
+}
+public int getMemberId() {
+return memberId;
+}
+public void setMeberId(int memberId) {
+this.memberId=memberId;
+}
+public String getMemberName() {
+return memberName;
+}
+public void setMemberName(String memberName) {
+this.memberName=memberName;
+}
+public String toStirng() {
+return memberName+" 회원님의 아이디는 "+memberId+"입니다";
+}
+}
+
+//-ArrayList 활용하기
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class MemberHashMapTest{
+public static void main(String[] args) {
+MeberHashMap memberHashMap=new MemberHashMap();
+
+Member memberLee = new Member(1001, "이지원");
+Member memberSon = new Member(1002, "손민국");
+Member memberPark = new Member(1003, "박서훤");
+Member memberHong = new Member(1004, "홍길동");
+
+memberHashMap.addMember(memberLee);
+memberHashMap.addMember(memberSon);
+memberHashMap.addMember(memberPark);
+memberHashMap.addMember(memberHong);
+
+memberHashMap.showAllMember();
+
+memberHashMap.removeMember(1004);
+memberHashMap.showAllMember();
+}
+}
+// p.446~447
+//1번
+자료 구조를 사용하기 편리하도록 자바에서 제공하는 라이브러리를 컬렉션 프레임워크라고 합니다.
+
+//2번
+클래스에서 여러 자료형을 사용할 때 자료형을 명시하지 않고 자료형을 의미하는 문자로 선언한 후 실제 클래스를 생성할 때 자료형을 명시하는 프로그래밍 방식을 제네릭 이라고 합니ㅏㄷ.
+
+//3번
+Collection 인터페이스를 구현한 클래스를 순회하기 위해 사용하는 인터페이스는 Iterator입니다.
+
+//4번
+TreeSet를 사용할 때 Comparable 인터페이스를 구현해야 하는 이유를 설명하세요.
+TreeSet은 이진트리로 정렬이 되어지는 구조이기 때문이다.
+
+//5번
+StudentTest의 출력결과가 다음처럼 나오도록 Student 클래스르 ㄹ구현해 보세요.
+class Student{
+private String a, b;
+Student(String a, String b){
+this.a=a;
+this.b=b;
+}
+public int hashCode() {
+return Integer.parseInt(a);
+}
+public boolean equals(Object obj) {
+Student s=(Student)obj;
+if(a.compareTo(s.a)==0) {
+return true;
+}
+else {
+return false;
+}
+}
+public class StudentTest{
+public static void main(String[] args) {
+HashSet<Student> set=new HashSet<Student>();
+set.add(new Student("100","홍길동"));
+set.add(new Student("200","강감찬"));
+set.add(new Student("300","이순신"));
+set.add(new Student("400","정약용"));
+set.add(new Student("100","송중기"));
+
+System.out.println(set);
+}
+}
+
+// 6번
+ import java.util.HashMap;
+  
+ class Car { String name;
+  
+  public Car() { }
+  
+  public Car(String name) { this.name = name; }
+  
+  }
+  
+  class CarFactory { private static CarFactory instance = new CarFactory();
+  HashMap<String, Car> carMap = new HashMap<>();
+  
+  private CarFactory() { }
+  
+  public static CarFactory getInstance() { if (instance == null) { instance =
+  new CarFactory(); } return instance;
+  
+  }
+  
+  public Car createCar(String name) { if (carMap.containsKey(name)) { return
+  carMap.get(name); } Car car = new Car(); carMap.put(name, car); return car; }
+  }
+  
+  public class test { public static void main(String[] args) { 
+  CarFactory factory = CarFactory.getInstance();
+  Car sonanta1 = factory.createCar("연수 차");
+  Car sonanta2 = factory.createCar("연수 차"); 
+  System.out.println(sonanta1 ==  sonanta2);
+  
+  Car avante1 = factory.createCar("승연 차"); 
+  Car avante2 =factory.createCar("승연 차"); 
+  System.out.println(avante1 == avante2);
+ 
+  System.out.println(sonanta1 == avante1); 
+  } 
+  }
+ 
+}
+}
