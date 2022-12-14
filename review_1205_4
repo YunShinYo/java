@@ -1,0 +1,33 @@
+/*
+class Circle {
+	private double r;
+
+	Circle(double r) {
+		this.r = r;
+	}
+
+	double get() {
+		return r;
+	}
+}
+class Cir extends Circle{
+	String name;
+	Cir(double r, String name){
+		super(r);
+		this.name=name;
+		
+	}
+	void pr() {
+		System.out.println(get()+"인 "+name+" 출력");
+	}
+}
+
+public class review_1205_4 {
+
+	public static void main(String[] args) {
+		Cir c = new Cir(2.5, "circle");
+		c.pr();// 2.5인 circle 출력
+	}
+
+}
+*/
