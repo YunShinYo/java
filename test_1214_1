@@ -1,0 +1,18 @@
+
+public class test_1214_1 {
+	static int[] make() {
+		int a[]=new int[5];
+		for(int i=0; i<5; i++) {
+			a[i]=i;
+		}
+		return a;
+	}
+
+	public static void main(String[] args) {
+		int ary[];
+		ary = make();
+		for (int i = 0; i < ary.length; i++) {
+			System.out.println(ary[i] + " ");
+		}
+	}
+}
