@@ -1,0 +1,27 @@
+
+
+import java.util.Scanner;
+
+class Show implements Cal{
+	public int cal(int a, int b) {
+		int sum=0;
+		for(int i=a; i<=b; i++) {
+			sum+=i;	
+		}
+		return sum;
+	}
+}
+public class test_1209_6 {
+	public static void main(String[] args) {
+		Cal c=new Show();
+		Scanner s=new Scanner(System.in);
+		//(Cal은 인터페이스,
+		//a,b,는 두 정수를 입력받아 a부터 b까지 총합)
+		
+		int a=s.nextInt();
+		int b=s.nextInt();
+		
+		System.out.println(c.cal(a,b));
+		s.close();
+	}
+}
