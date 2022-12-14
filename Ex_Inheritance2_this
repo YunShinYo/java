@@ -1,0 +1,19 @@
+/*class Person{
+	private String name;
+	
+	Person(String name){
+		this.name=name;
+	}
+	void name() {
+		System.out.println(name);
+	}
+}
+
+//extends를 아직 안함
+public class Ex_inheritance2 {
+	public static void main(String[] args) {
+		Person p=new Person("user1");
+		p.name();	//user1 출력
+	}
+}
+*/
