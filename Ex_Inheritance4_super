@@ -1,0 +1,32 @@
+/*
+class Song {
+
+String name;
+	Song() {
+		System.out.println("BTS");
+	}
+	Song(String name){
+		this.name=name;
+	}
+}
+
+class A extends Song { // 상속
+	A() {
+		//super("RM");//아이유만 출력된다.
+		//super("RM")이 있기 때문에 Song(String name)생성자가 호출되어 bts는 출력이 안된다.
+		//super("RM")이 없으면 bts, 아이유가 출력된다.
+		super();//BTS, 아이유가 출력된다.
+		//super()가 있기 때문에 Song() 생성자가 호출되어 bts도 호출된다.
+		System.out.println("아이유");
+	}
+}
+
+
+public class Ex_inheritance4 {
+
+	public static void main(String[] args) {
+		A a = new A();	
+	}
+
+}
+*/
