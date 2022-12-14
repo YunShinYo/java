@@ -1,0 +1,43 @@
+/*
+class Book {
+	int bookNumber;
+	String bookTitle;
+
+	Book(int bookNumber, String bookTitle) {
+		this.bookNumber = bookNumber;
+		this.bookTitle = bookTitle;
+	}
+//	void show() {
+//		System.out.println(this);	//book클래스의 객체
+//	}
+	public String toString() {	//오버라이딩 개념(원래는 Book클래스가 아니고 Object 클래스의 메소드이다)
+		return bookNumber+" "+bookTitle;
+	}
+	//toString() : Object(부모)클래스에서는 클래스이름@해시코드
+	//			   Book(자식)클래스에서 toString을 오버라이딩했기 때문에
+	//			   부모클래스의 클래스이름@해시코드 작업이 무시된다.
+}
+
+public class Ex_Tostring {
+	public static void main(String[] args) {
+		Book book1 = new Book(200, "개미");
+
+//		book1.show();	//Book@587d1d39
+		
+		//출력-> 메모리 주소값이 같다(클래스이름@주소값)
+		System.out.println(book1);//Book@587d1d39
+		//System.out.println(book1.toString());//Book@587d1d39
+		
+		//객체(참조변수)를 출력할때 자동으로 toString메소드가 호출된다.
+		
+		System.out.println(book1.bookNumber);
+		System.out.println(book1.bookTitle);
+		//출력->
+		//200
+		//개미
+		
+		//toString() : 객체를 문자열로 변환해주는 메소드
+		//Object 클래스의 메소드이다.
+	}
+}
+*/
