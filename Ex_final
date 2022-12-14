@@ -1,0 +1,67 @@
+
+public class Ex_final {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// 상수 선언(변수와 다르다)
+		// 실행 중 값 변경 불가
+		// final 키워드 사용
+		// 선언 시 초기값 지정
+
+		// final int a=5; //정수형 변수 a선언 -> 4바이트 메모리 할당됨
+
+		// a=10; //에러남 -> 왜? 고정된 값이므로(실행 중 값 변경 불가능)
+
+		// int b;
+		// System.out.println(b);
+		// int형은 초기화할 때 변수에 값을 넣어주어야 에러가 나지 않는다
+
+		// 자동 타입 변환 : 원래의 타입보다 큰 타입으로 바뀔 때
+		// byte>>short/char>>int/long>>float>>double
+
+		// long var1;
+		// byte b2=25;
+		// var1 = b2;
+		// var1 : 롱타입 변수, = : 자동타입변환, b : 바이트타입 변수
+
+		// 강제 타입 변환 : 개발자의 의도적으로 타입 변환
+		// 개발자가 코드에 명시적으로 타입 변환 지정
+		// 실수 타입이 정수 타입으로 강제 변환되면 소수점 아래가 버려짐 -> 데이터 손실★
+
+		// short var2;
+		// int n1 = 855638017;
+		// var2 = (short)n1;
+		// short 타입 변수, int 타입 값을 short 타입으로 강제 변환, int 타입 변수
+
+		// double d = 1.9;
+		// int n2=(int)d;
+
+		byte b = 127;
+		int i = 100;
+
+		//byte aa= 0xf8;	//error! -> 16진수는 강제형변환을 해주어야 한다.
+		byte ab= (byte)0xf8;	//byte는 출력가능한 범위가 있다
+								//248
+								//-128~127
+								//248-128 => 120이니까 츌력이 -8이라는 것이다...(보수를 알아야한다)
+		//System.out.println("ab는 "+ab);	//구글링을 해서 16진수를 알아보자
+											//https://www.ibm.com/docs/ko/aix/7.1?topic=adapters-ascii-decimal-hexadecimal-octal-binary-conversion-table
+		//★정리★==>248을 -128~127범위 안에 없기 때문에
+		//-128+248=120 번째이므로
+		//-128+120 = -8임
+		
+		
+		System.out.println(b + i);	//127
+
+		System.out.println(10 / 4);//2
+		System.out.println(10.0 / 4); //2.5 (실수와 정수끼리 사칙연산 시 실수기준)
+		System.out.println(10 / 4.0); //2.5
+
+		System.out.println((int) (2.8));//2
+		System.out.println((int) 2.8 + 1.8);//2+1.8->3.8
+
+		System.out.println((int) (2.8 + 1.8));// (int)4.6->4
+		System.out.println((int) 2.8 + (int) 1.8);//3
+	}
+
+}
