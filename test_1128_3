@@ -1,0 +1,70 @@
+import java.util.Scanner;
+
+public class test_1128_3 {
+	public static void main(String[] args) {
+		
+		//3. 정수 10개를 입력받아 평균 출력(배열, length필드 사용)
+		Scanner s=new Scanner(System.in);
+		
+		int intArray[] = new int[10];
+		/*
+		int sum=0, cnt=0;
+		for(int i=0; i<intArray.length; i++) {
+			intArray[i]=s.nextInt();
+			sum+=intArray[i];
+			cnt++;
+		}
+		System.out.println((double)sum/cnt);
+		
+		
+		//3.1) 정수 10개를 입력받아 7의 배수만 출력 (배열)
+		int arr[]=new int[10];
+		for(int i=0; i<arr.length; i++) {
+			arr[i]=s.nextInt();
+		}
+		for(int i=0; i<arr.length; i++) {
+			if(arr[i]%7==0) {
+				System.out.println(arr[i]);
+			}
+		}
+		
+		//4. 다음 코드를 보고 3가지로 변경하여 출력해라.
+		//double sum=0.0;
+		//double ary[]={1.0, 1.5, 2.0, 2.5};
+		//for(int i=0; i<4 ;i++) 
+		//sum+=ary[i];
+		//System.out.println(sum);
+
+		//4.1)while문으로 바꾸어 출력해라.
+		double sum=0.0;
+		double ary[]= {1.0,1.5,2.0,2.5};
+		int i=0;
+		while(i<ary.length) {
+			sum+=ary[i];
+			i++;
+		}
+		System.out.println(sum);
+		
+		
+		
+		//4.2)do~while문으로 바꾸어 출력해라.
+		int i=0;
+		double sum=0.0;
+		double ary[]= {1.0,1.5,2.0,2.5};
+		do {
+			sum+=ary[i];
+			i++;
+		}while(i<ary.length);
+		System.out.println(sum);
+	
+		
+		//4.3)for~each문으로 바꾸어 출력해라.
+		double sum=0.0;
+		double ary[]= {1.0,1.5,2.0,2.5};
+		for(double i:ary) {
+			sum+=i;
+		}
+		System.out.println(sum);
+		*/
+	}
+}
