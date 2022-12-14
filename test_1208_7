@@ -1,0 +1,176 @@
+import java.util.*;
+import java.lang.*;
+
+class Grade {
+private int english, math, science;
+private int sum;
+private Grade[] grade;
+private int n;
+
+Grade(int english, int math, int science) {
+this(english, math);
+this.science = science;
+}
+
+Grade(int english, int math) {
+grade = new Grade[n++];
+this.english = english;
+this.math = math;
+}
+
+
+Grade() {}
+
+void avg() {
+for (int i = 0; i < grade.length; i++) {
+grade[i] = new Grade(english, math, science);
+}
+sum = english + math + science;
+System.out.println("세 과목의 평균값 : " + (sum /3.0));
+}
+}
+abstract class Calc{
+double op1, op2;
+public void set(double op1, double op2) {
+this.op1=op1;
+this.op2=op2;
+}
+public abstract double calculate();
+}
+class Add extends Calc{
+
+@Override
+public double calculate() {
+return (op1+op2);
+}
+}
+class Sub extends Calc{
+@Override
+public double calculate() {
+return (op1-op2);
+}
+}
+class Mul extends Calc{
+@Override
+public double calculate() {
+return (op1*op2);
+}
+}
+class Div extends Calc{
+@Override
+public double calculate() {
+return (op1/op2);
+}
+}
+
+
+class Math{
+static int []a;
+Math(int n){
+a= new int[n];
+}
+
+
+static double random() {
+for(int i=0; i<a.length; i++) {
+try {
+a[i]=(int)((Math.random()*100)+1);
+return a[i];
+} catch (Exception e) {
+e.printStackTrace();
+}
+}
+return 0;
+}
+}
+
+public class test_1208_7 {
+
+public static void main(String[] args) {
+/*
+// 1. 클래스 Grade
+// 1.1 필드는 int형 english, math, science로 모두 private으로 선언하라. 이 필드들은 영어, 수학, 과학 점수를
+// 저장하는 데 사용한다.
+// 1.2 생성자는 기본 생성자와 세 필드를 초기화하는 생성자 두가지를 구현해라. 생성자 구현에 적어도 한가지 이상의 this()사용을
+// 포함시켜라.
+// 1.3 메소드는 필요한 함수들을 임의로 구현하고, 세 과목의 평균을 구하는 avg메서드를 구현해라. avg메서드는 double형을
+// 반환한다.
+// 1.4 main메서드에서 Grade의 기본생성자와 각 과목의 점수를 초기화하는 생성자(파라미터 포함)를 사용하여 Grade 객체 두 개를
+// 생성해라.
+// 각 과목의 점수는 적당한 값을 프로그램(임의의 값을 주기)에서 지정해라. 두 객체에 대해서 english, math, science점수와
+// 세 과목의 평균값을 화면에 출력해라.
+Grade grade=new Grade();
+Grade grade2 = new Grade(100, 100, 99);
+grade2.avg();
+Grade grade3 = new Grade(99, 98, 97);
+grade3.avg();
+
+// 2. 추상 클래스 Calc를 작성해라.
+// A. 
+// 2.1 필드는 double형 op1, op2가 있고, 두 개는 피연산자다.
+// 2.2 void set(double op1, double op2); 메서드는 필드값을 설정한다.(초기화)
+// 2.3 double calculate()는 추상 메서드로 Calc를 상속받아 사용하는 클래스의 목적에 맞는 연산 실행하고 결과를 반환한다.
+// B. Add, Sub, Mul, Div클래스는 Calc를 상속받아 클래스 이름에 맞는 연산을 하도록 구현해라.
+// C. 메인 메소드에서 다음 실행결과와 같이 두 개의 정수와 연산자를 입력받은 후 Add, Sub, Mul, Div 중 연산자를 처리할 수
+// 있는 객체를 생성하고 set()와 calculate()를 호출하여 결과값을 화면에 출력해라.(switch-case)
+// 실행결과) 두 피연산자와 연산자 입력: 10 5 /
+// 답: 2.0
+
+Scanner s=new Scanner(System.in);
+double res;
+while(true) {
+try {
+
+System.out.print("두 피연산자와 연산자 입력: ");
+int op1=s.nextInt();
+int op2=s.nextInt();
+String str=s.next();
+switch(str) {
+case "+":
+
+Add add=new Add();
+add.set(op1, op2);
+res=add.calculate();
+System.out.println("답: "+res);
+break;
+case "-":
+Sub sub=new Sub();
+sub.set(op1, op2);
+res=sub.calculate();
+System.out.println("답: "+res);
+break;
+case "*":
+Mul mul=new Mul();
+mul.set(op1, op2);
+res=mul.calculate();
+System.out.println("답: "+res);
+break;
+case "/":
+Div div=new Div();
+div.set(op1, op2);
+res=div.calculate();
+System.out.println("답: "+res);
+break;
+}
+}
+catch(Exception e) {
+System.out.println("잘못된 값. 다시 입력: ");
+s.next();
+
+}s.close();
+}
+*/
+
+// 3. 사용자로부터 배열의 크기를 입력받아 int형 배열을 생성한다. 성적은 Math클래스의 random메서드를 사용하여 생성한 배열에
+// 저장한다. 성적은 0~100점 사이의 값을 갖을 수 있다. 생성된 성적 값을 화면에 출력한다. 구현할 때 .length를 사용해라.
+Scanner s=new Scanner(System.in);
+System.out.println("사용자로부터 배열의 크기 입력: ");
+int n=s.nextInt();
+
+Math math=new Math(n);
+double d=math.random();
+System.out.println(d);
+s.close();
+}
+
+}
