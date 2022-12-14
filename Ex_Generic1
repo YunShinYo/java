@@ -1,0 +1,53 @@
+/*
+class Java{
+	String title;
+	Java(String t){
+		title=t;
+	}
+	void show() {
+		System.out.println(title);
+	}
+}
+
+class DB{
+	int n;
+	DB(int n){
+		this.n=n;
+	}
+	void pr() {
+		System.out.println(n);
+	}
+}
+class Program<T>{	//모형자 <> : 제네릭 기호
+	T t;
+	void in(T t) {	//void in(A a)
+		this.t=t;
+	}
+	T get() {
+		return t;
+	}
+}
+public class Ex_generic1 {
+
+	public static void main(String[] args) {
+		//제네릭 : 일반적인 포괄적인 이라는 뜼이다.
+		Program<Java> p=new Program<Java>();
+		p.in(new Java("java"));
+		
+		 Java j=p.get();
+		 j.show();
+		 
+		 Program<DB> d=new Program<DB>();
+		 //<DB> d=new Program<>();와 같다
+		 d.in(new DB(5));
+		 DB db=d.get();
+		 db.pr();
+		
+		//제네릭(모형자) -> 템플릿(모형자)
+		//generic <> angle blanket
+		 
+		//컬렉션 프레임워크(Vector, ArrayList, Map, Set)
+	}
+
+}
+*/
