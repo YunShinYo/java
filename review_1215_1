@@ -1,0 +1,20 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+
+public class review_1215_1 {
+public static void main(String[] args) {
+	HashMap<Integer, String>m = new HashMap<Integer, String>();
+	m.put(10, "five");
+	m.put(11, "fiv");
+	
+	//iterator
+	Set<Integer> s=m.keySet();
+	Iterator<Integer> it = s.iterator();
+	while(it.hasNext()) {
+		int n=it.next();
+		System.out.println(n+" "+m.get(n));
+	}
+	System.out.println(m.get(10));
+}
+}
