@@ -1,0 +1,76 @@
+
+class Student extends Thread {
+	String name;
+	Sh sh;
+
+	Student(String name, Sh sh) {
+		this.name = name;
+		this.sh = sh;
+	}
+
+	@Override
+	public void run() {
+		for (int i = 1; i < 6; i++) {	//5회
+			try {
+				sh.add();
+				sleep(500); // 0.5초간
+			} catch (InterruptedException e) { }
+		}
+	}
+}
+
+class Sh {
+	private int num=0;
+	public void add() {
+		int n=num;
+		//int n = 0;
+		n += 10;
+		num=n;
+		System.out.println(num);
+	}
+}
+
+public class review_1215_2 {
+
+	public static void main(String[] args) {
+		Sh sh = new Sh();
+		Student th1 = new Student("jack", sh);
+		Student th2 = new Student("tom", sh);
+
+		th1.start();	//객체 2개가 호출 -> 멀티스레드이다(스레드가 2개이상임)
+		th2.start();
+		
+		try {
+			th1.join();
+			th2.join();
+		}catch(Exception e) {
+			th2.start();
+		}
+
+		// 출력->
+		// 10
+		// 10
+		// 10
+		// 10
+		// 10
+		// 10
+		// 10
+		// 10
+		// 10
+		// 10
+		
+		//출력2->
+		//10
+		//20
+		//30
+		//40
+		//50
+		//60
+		//70
+		//80
+		//90
+		//100
+
+	}
+
+}
