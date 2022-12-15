@@ -22,6 +22,7 @@ class Student extends Thread {
 class Sh {
 	private int num=0;
 	public void add() {
+		//Thread.yield(); ->join(), syncronized...
 		int n=num;
 		//int n = 0;
 		n += 10;
@@ -43,9 +44,8 @@ public class review_1215_2 {
 		try {
 			th1.join();
 			th2.join();
-		}catch(Exception e) {
-			th2.start();
-		}
+		}catch(Exception e) { }
+		th2.start();
 
 		// 출력->
 		// 10
