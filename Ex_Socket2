@@ -25,10 +25,10 @@ public class Ex_Socket2 {
 				String msg=null;
 				
 				//읽어들인다!!!!
-				InputStream in=so.getInputStream();
+				InputStream in=so.getInputStream();//InputStream이 스트림이기 떄문에 바이트단위로 읽어야한다!
 				b=new byte[100];
 				int r=in.read(b);	//메시지 바이트 배열 읽는다.
-				msg=new String(b,0,r,"UTF-8");
+				msg=new String(b,0,r,"UTF-8");//b를 0부터 r길이까지 UTF-8로 변경을 해준다
 				//바이트 배열을 문자열로 바꾼다.
 				System.out.println("데이터 받기 성공");	//다 읽어들인것이다!
 				
