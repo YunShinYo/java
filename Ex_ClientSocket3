@@ -1,0 +1,51 @@
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.InetSocketAddress;
+import java.net.Socket;
+
+public class Ex_ClientSocket3 {
+	public static void main(String[] args) {
+		// 클라이언트쪽(2)
+
+		Socket s = null; // 클라이언트 소켓
+
+		try {
+			s = new Socket();
+			System.out.println("연결요청");
+
+			s.connect(new InetSocketAddress("localhost", 5001)); // 서버쪽과 동일하게 해야함
+			System.out.println("연결성공");// 그냥 써봤다=>연결된거 아님
+
+			byte[] b = null;
+			String msg = null;
+			OutputStream os = s.getOutputStream();
+
+			msg = "Hi Server";
+			// 문자열을 바이트로 변경해서 전송하겠다.
+			b = msg.getBytes("UTF-8");
+
+			os.write(b);
+			System.out.println("데이터 보내기 성공");
+
+			InputStream in = s.getInputStream();
+			b = new byte[100];
+			int r = in.read();
+			// 메시지 바이트 배열 읽는다.
+			msg = new String(b, 0, r, "UTF-8");
+			// 바이트 배열을 문자열로 바꾼다.
+			System.out.println("데이터 받기 성공");
+
+			in.close();
+			os.close();
+			s.close();
+		} catch (Exception e) {
+		}
+	}
+}
+
+//ServerSocket 먼저 실행하고 ClientSocket 실행하면
+//출력->
+//연결 되기를 기다림..
+//데이터 받기 성공
+//데이터 보내기 성공
+//연결 되기를 기다림..
