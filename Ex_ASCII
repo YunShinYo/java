@@ -21,8 +21,8 @@ public class Ex_ASCII {
 		//a~내가 입력한 수 바로 전까지 출력될것이다
 		char ch=(char)j;
 		System.out.print(ch);
-		}
 		System.out.println();
+		}
 		}
 
 		 
