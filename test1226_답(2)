@@ -1,0 +1,147 @@
+package Test;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+class Worker {
+
+	private int id;
+	private String name;
+	private String dept;
+	private String address;
+	private String birth;
+
+	Worker(int i, String n, String d, String a, String b) {
+		id = i;
+		name = n;
+		dept = d;
+		address = a;
+		birth = b;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDept() {
+		return dept;
+	}
+
+	public void setDept(String dept) {
+		this.dept = dept;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getBirth() {
+		return birth;
+	}
+
+	public void setBirth(String birth) {
+		this.birth = birth;
+	}
+
+	public String toString() {
+		return "이름: " + name + "\n부서: " + dept + "\n주소 :" + address + "\n생일: " + birth;
+	}
+}
+
+class Work2 {
+
+	HashMap<Integer, Worker> h = new HashMap<>();
+	Scanner s = new Scanner(System.in);
+
+	void addworker() {
+		while (true) {
+			System.out.println("사번: ");
+			int id = s.nextInt();
+
+			System.out.println("이름");
+			String name = s.next();
+
+			System.out.println("부서");
+			String dept = s.next();
+
+			System.out.println("주소");
+			String adr = s.next();
+
+			System.out.println("생일");
+			String birth = s.next();
+
+			Worker wk = new Worker(id, name, dept, adr, birth);
+
+			if (h.containsKey(id)) {
+				System.out.println(wk.getId() + "은 이미 있다");
+			} else {
+				h.put(id, wk);
+				System.out.println("사원 정보가 입력되었다.");
+				break;
+			}
+
+		}
+	}
+
+	void findWorker() {
+		System.out.println("검색하고자 하는 사원의 사번은?");
+		int id = s.nextInt();
+
+		if (h.containsKey(id)) {// 123
+			Worker wk = h.get(id);
+			System.out.println(wk);
+		} else {
+			System.out.println("없는 사원입니다");
+		}
+	}
+
+	void end() {
+		System.out.println("프로그램 종료");
+		System.exit(0);
+	}
+}
+
+public class ANSWER_JavaTest2 {
+	public static void main(String[] args) {
+
+		Work2 w2 = new Work2();
+		Scanner s = new Scanner(System.in);
+
+		while (true) {
+			System.out.println("<사원 정보 관리 프로그램>");
+			System.out.println("1.사원정보 입력");
+			System.out.println("2.사원정보 개별 조회");
+			System.out.println("3.프로그램 종료");
+
+			int select = s.nextInt();
+			switch (select) {
+			case 1:
+				w2.addworker();
+				break;
+			case 2:
+				w2.findWorker();
+				break;
+
+			case 3:
+				w2.end();
+				break;
+			}
+		}
+	}
+}
