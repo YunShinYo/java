@@ -1,0 +1,421 @@
+package Test;
+//<자바 프로그래밍 언어활용 중간 평가>
+//이름 : 윤신요
+
+import java.util.Scanner;
+
+import javax.swing.JFrame;
+
+//2)
+//class Circle {
+//	private double r;
+//
+//	Circle(double r) {
+//		this.r = r;
+//	}
+//
+//	public Circle() {
+//	}
+//
+//	double area() {
+//		return 3.14 * r * r;
+//	}
+//
+//}
+//
+//3-A)
+//class Num {
+//	int max, sum;
+//
+//	int add(int n) {
+//		if (n > max) {
+//			max = n;
+//		}
+//		System.out.println("max: " + max);
+//		sum += n;
+//		return sum;
+//
+//	}
+//}
+
+//3-B)
+//class Num {
+//	int n = 0;
+//	int sum = 0, max = 0;
+//	int[] a = new int[4];
+//
+//	public void add(int n) {
+//		this.n = n;
+//
+//		sum += n;
+//	}
+//
+//	public int getSum() {
+//		return sum;
+//	}
+//
+//	public int getMax() {
+//		// ㅠㅠㅠㅠㅠ
+//		a[0] = 7;
+//		a[1] = -1;
+//		a[2] = 20;
+//		a[3] = 5;
+//		max = a[0];
+//		for (int i = 0; i < a.length; i++) {
+//			if (a[i] > max) {
+//				max = a[i];
+//			}
+//		}
+//
+//		return max;
+//
+//	}
+//
+//}
+
+//3-C)
+//class Num {
+//	int n = 0, sum = 0, max = 0;
+//
+//	Num() {
+//		this.n = 0;
+//	}
+//
+//	Num(int n) {
+//		this.n = n;
+//	}
+//
+//	public int getSum() {
+//		sum += this.n;
+//		return sum;
+//	}
+//
+//	public int getMax() {
+//		if (max < this.n) {
+//			max = this.n;
+//		}
+//		return max;
+//	}
+//}
+
+//7)
+class Worker {
+	private int num;
+	private String name, dept, addr, birthDay;
+
+	Worker() {
+
+	}
+
+	Worker(int num, String name, String dept, String addr, String birthDay) {
+		num = num;
+		name = name;
+		dept = dept;
+		addr = addr;
+		birthDay = birthDay;
+	}
+
+	public void setNum(int num) {
+		this.num = num;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setDept(String dept) {
+		this.dept = dept;
+	}
+
+	public void setAddr(String addr) {
+		this.addr = addr;
+	}
+
+	public void setBirthDay(String birthDay) {
+		this.birthDay = birthDay;
+	}
+
+	public int getNum() {
+		return num;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getDept() {
+		return dept;
+	}
+
+	public String getAddr() {
+		return addr;
+	}
+
+	public String getBirthDay() {
+		return birthDay;
+	}
+
+	void show() {
+		System.out.println("사번: " + getNum());
+		System.out.println("이름: " + getName());
+		System.out.println("부서: " + getDept());
+		System.out.println("주소: " + getAddr());
+		System.out.println("생일: " + getBirthDay());
+	}
+}
+
+class Arr extends Worker {
+	Worker[] worker;
+	int n;
+
+	Arr() {
+	}
+
+	Arr(int n) {
+		worker = new Worker[n];
+		n = 0;
+	}
+
+	void add(Worker w) {
+		worker[n++] = w;
+	}
+
+	void worker() {
+		Scanner s = new Scanner(System.in);
+		System.out.println("사번: ");
+		int num = s.nextInt();
+		System.out.println("이름: ");
+		String name = s.next();
+		System.out.println("부서: ");
+		String dept = s.next();
+		System.out.println("주소: ");
+		String addr = s.next();
+		System.out.println("생일: ");
+		String birthDay = s.next();
+		add(new Worker(num, name, dept, addr, birthDay));
+	}
+
+	void all() {
+		for (int i = 0; i < n; i++) {
+			worker[i].show();
+		}
+	}
+}
+
+//6)
+class Student {
+	String a, b;
+	int c;
+
+	Student(String a, String b, int c) {
+		this.a = a;
+		this.b = b;
+		this.c = c;
+	}
+
+	public void show() {
+		System.out.println(a + " " + b + " " + c);
+	}
+}
+
+public class JavaTest extends JFrame {
+	JavaTest() {
+		// 5)
+//		Container c = getContentPane();
+//		c.setLayout(new GridLayout(3, 3, 30, 50));
+//		setVisible(true);
+//		setTitle("프레임");
+//
+//		String s[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+//		for (int i = 0; i < s.length; i++) {
+//			JButton b = new JButton(s[i]);
+//			c.add(b);
+//		}
+
+
+	}
+
+	public static void main(String[] args) {
+		// <자바 프로그래밍 언어활용 중간 평가>
+		// 이름:윤신요
+
+		// 1.
+//			Scanner s = new Scanner(System.in); int a, b;
+//			System.out.println("두 정수를 입력: ");
+//			a = s.nextInt();
+//			b = s.nextInt();
+//			System.out.printf("합은 %d", a + b);
+
+		// 2.
+//		Scanner s = new Scanner(System.in);
+//
+//		Circle[] c = new Circle[5];
+//		for (int i = 0; i < c.length; i++) {
+//			System.out.println("반지름 5개 입력 : ");
+//			double r = s.nextDouble();
+//			c[i] = new Circle(r);
+//			System.out.println("원의 면적의 합 " + c[i].area());
+//		}
+
+		// 3
+		// A)
+//		int a, b, n;
+//		Scanner s = new Scanner(System.in);
+//		Num num = new Num();
+//		for (int i = 1; i < 50; i++) {
+//			a = s.nextInt();
+//			b = s.nextInt();
+//			n = a + b;
+//			int res = num.add(n);
+//		}
+
+		// B)
+//		Num nb = new Num();
+//		nb.add(7);
+//		nb.add(-1);
+//		nb.add(20);
+//		nb.add(5);
+//		System.out.println("Sum = " + nb.getSum());
+//		System.out.println("Max = " + nb.getMax()); // 잘 안돼요 ㅠㅠ
+
+		// C)
+//		int a[] = new int[] { 7, -1, 20, 5 };
+//		Num nc = null;
+//		for (int i = 0; i < a.length; i++) {
+//			nc = new Num(a[i]);
+//		}
+//		System.out.print("Sum = " + nc.getSum());
+//		System.out.print("Max = " + nc.getMax());
+
+		// 4)
+//		HashMap<String, Double> m=new HashMap<>();
+//		m.put("홍길동", 99.9);
+//		Set<String> s=m.keySet();
+//		Iterator<String> it=s.iterator();
+//		
+//		while(it.hasNext()) {
+//			String key=it.next();
+//			double value=m.get(key);
+//			System.out.println(key+" "+value);
+//		}
+
+		// 5)
+//		new JavaTest();
+
+		// 6)
+//		ObjectOutputStream os=null;
+//		try{
+//			os=new ObjectOutputStream(new FileOutputStream("java.txt"));
+//			Student s = new Student("jack", "123", 20);
+//
+//			os.writeObject(s);
+//			}catch(Exception e) {}
+//			os.close();
+//
+//			ObjectInputStream in=null;
+//			try {
+//			in=new ObjectInputStream(new FileInputStream("java.txt"));
+//
+//			Student s=(Student)in.readObject(); //형변환
+//
+//			s.show();
+//			}
+//			catch(Exception e) {}
+//			in.close();
+//			}
+		
+		// 7)
+		int num;
+		String name, dept, addr;
+		String birthDay;
+
+		Arr ar = new Arr(5);
+		System.out.println("<사원 정보 관리 프로그램>");
+		while (true) {
+			System.out.println("1.사원정보 입력");
+			System.out.println("2.사원정보 개별 조회");
+			System.out.println("3.프로그램 종료");
+
+			Scanner s = new Scanner(System.in);
+			char c = s.next().charAt(0);
+
+			switch (c) {
+			case '1':
+				ar.worker();
+				break;
+			case '2':
+				ar.all();
+				break;
+			case '3':
+				System.out.println("종료");
+				return;
+			}
+		}
+	}
+}
+
+//<자바 프로그래밍 언어활용 중간 평가>                                     이름: 
+//<패키지명은 Test로 주고 1~6번까지는 JavaTest 클래스, 7번은 Worker클래스를 만든다.> 
+//1.	두 정수를 입력받아 합을 구하여 출력하는 프로그램을 작성해라. (5점)
+//실행 결과) 두 정수를 입력: 10 20
+//           합은 30
+//2.	다음 Circle클래스를 활용하여 Circle 객체배열을 생성하고, 5개의 원 반지름을 입력받아 배열에 저장한 후, 원의 면적의 합을 출력해라. (r: 반지름) (10점)
+//class Circle{
+//private double r;
+//Circle(double r){
+//      this.r=r;
+//}
+//double area(){
+//   return 3.14*r*r;
+//} }
+//
+//3.	A) 입력된 숫자의 합과 입력 숫자 중 최대값을 구하는 Num 라는 이름의 클래스를 만들어라. 이 클래스는 add(int n) 라는 메소드를 가지고 있고, 이 함수가 호출될 때마다 매개변수n 의 값이 합에 누적된다. (10점)
+//B) 이 클래스는 getSum() 과 getMax() 라는 메소드를 가지는데, 이 메소드는 더해진 숫자의 합 반환, 현재까지 더해진 숫자 중 최대값을 반환한다. Num 클래스를 사용하는 main()은 다음과 같다. (10점)
+//public static void main(String[] args) {
+//Num nb = new Num();
+//nb.add(7); nb.add(-1); nb.add(20); nb.add(5); // 4개 숫자를 입력
+//System.out.println("Sum = " + nb.getSum());   // 4개 숫자의 합계
+//System.out.println("Max = " + nb.getMax());   // 4개 숫자 중 최대값
+//}}
+//실행 결과) Sum=31  
+//Max=20  
+//C)	위에 있는 Num 클래스에 두 개의 생성자를 추가하라. 파리미터가 없는 생성자와 하나의 파라미터를 가진 생성자를 만들어 파라미터가 없는 생성자는 초기값(n)이 0 이 되도록 하며, 정수값 n 을 파라미터로 가지는 생성자는 필드에 값을 초기화해라. 그 후 main함수에서 다시 객체 하나 생성하여 getSum(), getMax() 함수를 오버로딩해라.(10점)
+//D)	C) 위에 있는 Num 클래스에 두 개의 생성자를 추가하라. 파리미터가 없는 생성자와 하나의 파라미터를 가진 생성자를 만들어 파라미터가 없는 생성자는 초기값(n)이 0 이 되도록 하며, 정수값 n 을 파라미터로 가지는 생성자는 필드에 값을 초기화해라. 그 후 main함수에서 다시 객체 하나 생성하여 getSum(), getMax() 함수를 호출해라.(10점) C) 위에 있는 Num 클래스에 두 개의 생성자를 추가하라. 파리미터가 없는 생성자와 하나의 파라미터를 가진 생성자를 만들어 파라미터가 없는 생성자는 초기값(n)이 0 이 되도록 하며, 정수값 n 을 파라미터로 가지는 생성자는 필드에 값을 초기화해라. 그 후 main함수에서 다시 객체 하나 생성하여 getSum(), getMax() 함수를 호출해라.(10점)
+//
+//
+//4.	HashMap에 이름(문자열), 키(실수) 로 주고 이름이 키값이다. HashMap에 적절한 값을 임의로 설정하고 값을 두개 저장한다. 이름을 입력하면 이름에 맞는 값이 나오도록 구현해라. (5점)
+//5.	다음과 같이 화면이 뜨도록 GUI를 구현해라. (10점)
+// 
+//6.	다음 코드를 참고하여 객체 직렬화, 역직렬화를 보여라. (10점) (ObjectOutputStream, ObjectInputStream 사용, java.txt파일에 저장하고 콘솔창에 출력)
+//Student s= new Student(“jack”,”123”,20);
+//s.show();      //모든 데이터 출력
+//
+//7.	프로젝트 생성) (30점)
+//A.	Worker라는 클래스를 하나만든다.
+//B.	다른 클래스에서 접근이 불가능하도록 접근 제한자를 설정한다.(필요한 필드값)
+//C.	각 필드명과 타입은 아래의 실행결과를 참조하도록 한다.
+//D.	필드전체를 인자로 받는 생성자를 작성한다.
+//E.	각 필드의 값을 세팅하기 위한 setter 메소드를 작성한다.(초기화)
+//F.	각 필드의 값을 가져오기 위한 getter 메소드를 작성한다.(반환)
+//G.	사용자에게 메뉴를 보여주고 사용자가 콘솔 상에서 특정 메뉴를 입력하여 요청하면 해당 요청을 처리하는 기능을 가지고 있는 클래스를 작성하도록 한다.
+//실행 결과) 
+//<사원 정보 관리 프로그램>
+//1.	사원정보 입력
+//2.	사원정보 개별 조회
+//3.	프로그램 종료
+//
+//이렇게 구현한 후 1을 누르면 (여기서 입력한 데이터는 임의의 값)
+//사번: 123
+//          이름: 홍길동
+//          부서: 개발부서
+//          주소: 서울시 용산구
+//          생일: 10/26
+//         사원정보가 입력되었다. 
+//2번을 누르면       
+//검색하고자 하는 사원의 사번은? 123(입력)
+//이름: 홍길동
+//부서: 개발부서
+//          주소: 서울시 용산구
+//          생일: 10/26
+//3번을 누르면 “프로그램 종료”라고 출력
+
